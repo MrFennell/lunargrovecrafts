@@ -3,7 +3,7 @@ Theme Name: lunargrovecrafts
 Theme URI: http://underscores.me/
 Author: Ryan Fennell
 Author URI: http://fennellweb.com
-Description: A theme for Lunar Grove Crafts, Handpoured, scented, soy candles.
+Description: A theme for Lunar Grove Crafts: Handpoured, scented, soy candles.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
@@ -1132,6 +1132,11 @@ a.close.disabled{pointer-events:none}
 .rounded-left{border-bottom-left-radius:.25rem !important;border-top-left-radius:.25rem !important}
 .visible{visibility:visible !important}
 .invisible{visibility:hidden !important}
+#primary-menu li{font-size:1rem;font-weight:400;line-height:1.5;padding-right:.5rem;padding-left:.5rem}
+#primary-menu li a{color:#001225;float:left;font-weight:400;font-size:1rem;line-height:1.5;list-style:none;padding:.5rem 1rem}
+#primary-menu li:first-child a{color:transparent;background-image:url(http://localhost/lunargrovecrafts/wp-content/uploads/2019/10/home.svg);background-size:contain;background-repeat:no-repeat;background-position:center}
+h1,.h1{color:#001225;margin:0 auto 1.5rem auto}
+.orderby{margin-bottom:1em}
 @media(prefers-reduced-motion:reduce){.form-control,input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="number"],input[type="tel"],input[type="range"],input[type="date"],input[type="month"],input[type="week"],input[type="time"],input[type="datetime"],input[type="datetime-local"],input[type="color"],textarea,select{-webkit-transition:none;transition:none}
 .form-range::-webkit-slider-thumb{-webkit-transition:none;transition:none}
 .form-range::-moz-range-thumb{-webkit-transition:none;transition:none}

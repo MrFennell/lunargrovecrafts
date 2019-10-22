@@ -3,7 +3,7 @@ Theme Name: lunargrovecrafts
 Theme URI: http://underscores.me/
 Author: Ryan Fennell
 Author URI: http://fennellweb.com
-Description: A theme for Lunar Grove Crafts, Handpoured, scented, soy candles.
+Description: A theme for Lunar Grove Crafts: Handpoured, scented, soy candles.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
@@ -27,3 +27,40 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 // Bootstrap Styles
 @import './bootstrap/bootstrap';
+
+$brand-blue: #001225;
+
+#primary-menu li {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    padding-right: .5rem;
+    padding-left: .5rem;
+    a{
+        color: $brand-blue;
+        float: left;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.5;
+        list-style: none;
+        padding: .5rem 1rem;
+
+    }
+}
+#primary-menu li:first-child a{
+    color: transparent;
+    background-image: url(http://localhost/lunargrovecrafts/wp-content/uploads/2019/10/home.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h1 {
+    color: $brand-blue;
+    margin: 0 auto 1.5rem auto;
+}
+
+//woocommerce
+.orderby{
+    margin-bottom: 1em;
+}
