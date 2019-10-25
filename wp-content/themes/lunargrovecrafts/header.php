@@ -25,55 +25,66 @@
 	<a class="sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'lunargrovecrafts' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
+		
 		<?php if ( is_front_page() ) : ?>
 			<div id="hero">
+				
 				<?php 
-					$image = get_field('hero'); 	
-					if( $image ): ?>
-						<style type="text/css">
-							#hero {
-								background-image: url(<?php echo $image['url']; ?>);
-								width: 100%;
-								height: 500px;
-								background-position: center;
-								background-size: cover;
-								background-repeat: no-repeat;
-								display: flex;
-							}
-						</style>
-					<?php endif; 
-					$logo = get_field('home-header-logo');
+				
+				if( has_post_thumbnail() ):?> <!-- #set hero image -->
+					<style type="text/css">
+						#hero {
+							background-image: url("<?php echo esc_url(get_the_post_thumbnail_url()); ?>");
+						}
+					</style>
+				<?php endif; ?>
+				<nav id="site-navigation" class="navbar navbar-expand-md bg-dark"><!-- #site-navigation -->
+					<a class="navbar-brand" href="#">
+					<?php $logo = get_custom_logo();
+						if ($logo):
+							echo get_custom_logo();
+						endif;?>
+					</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					
+					<span class="navbar-toggler-icon"></span>
+					</button>
+					<?php
+						wp_nav_menu( array(
+							'theme_location' => 'menu-1',
+							'menu_id'        => 'primary-menu',
+							'menu_class' => 'navbar-nav',
+							'container_id' => 'navbarNav',
+							'container_class' => 'collapse navbar-collapse',
+						) );
+					?>
+		
+					<form class="form-inline">
+						<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+						<button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+					</form>
+				</nav>
+				<div id="front-page-header-text">
+					<?php
+					$image = get_field('header_logo');
 					if( !empty( $image ) ): ?>
-						<img id="home-header-logo" src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt']); ?>" />
-						<style type="text/css">
-							#home-header-logo{
-								width: 700px;
-								margin: auto;
-							}
-						</style>
+						<img class="front-page-header-logo" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+					<?php endif;
+					
+					$header_title = get_field('header_title');
+					if( !empty( $header_title ) ): ?>
+						<h1 class="header-title"><?php echo $header_title ?></h1>
 					<?php endif; ?>
+					<?php 
+						$header_subtitle = get_field('header_subtitle'); 
+						if( !empty( $header_subtitle ) ): ?>
+						<h2 class="header-subtitle"><?php the_field('header_subtitle');?></h2>
+						
+						<?php endif;?>
+				</div>
 			</div>
 		<?php endif;?>
-			<nav id="site-navigation" class="navbar navbar-expand-md navbar-light bg-light">
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-				</button>
-				<?php
-				wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-					'menu_class' => 'navbar-nav',
-					'container_id' => 'navbarNav',
-					'container_class' => 'collapse navbar-collapse',
-				) );
-				?>
-
-				<form class="form-inline">
-					<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-				</form>
-			</nav><!-- #site-navigation -->
+		
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

@@ -20,50 +20,105 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
+// Bootstrap Styles
+@import './bootstrap/bootstrap';
+
 // Base Styles
 @import './base/bootstrap_overrides';
 @import './base/wordpress';
 @import './base/forms';
 
-// Bootstrap Styles
-@import './bootstrap/bootstrap';
 
 $brand-blue: #001225;
-
-#primary-menu li {
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    padding-right: .5rem;
-    padding-left: .5rem;
-    a{
-        color: $brand-blue;
-        float: left;
-        font-weight: 400;
-        font-size: 1rem;
-        line-height: 1.5;
-        list-style: none;
-        padding: .5rem 1rem;
-
-    }
+$light-blue:#003266;
+$dark-blue:#002348;
+$dark-brown: #391300;
+$dark-gold: #392c00;
+$light-gold: #9d7900;
+a{
+    color: $brand-blue;
 }
-#primary-menu li:first-child a{
-    color: transparent;
-    background-image: url(http://localhost/lunargrovecrafts/wp-content/uploads/2019/10/home.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+a:hover {
+    color: $light-gold;
+    text-decoration: none;
 }
-
-h1, .h1 {
+h1 {
     color: $brand-blue;
     margin: 0 auto 1.5rem auto; 
     text-align: center;
 }
-h2 {
+
+
+h2.front-page {
+    color: $brand-blue;
     text-align: center;
 }
+
+header{
+    #hero{
+        width: 100%;
+        height: 500px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+
+        
+    }
+    nav{
+
+        opacity: 0.9;
+        .custom-logo-link img{
+            height: 85px;
+            padding: 4px;
+        }
+        #primary-menu li {
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            padding-right: .5rem;
+            padding-left: .5rem;
+            margin-left: 20px;
+            a{
+                color: #fff;
+                float: left;
+                font-weight: 400;
+                font-size: 1rem;
+                line-height: 1.5;
+                list-style: none;
+                padding: .5rem 1rem;
+        
+            }
+        }
+    }
+    #front-page-header-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        font-size: 3rem;
+
+        .front-page-header-logo{
+            width: 500px;
+            margin-top: 30px;
+        }
+        .header-title{
+            width: 700px;
+            color: #fff;
+        }
+        .header-subtitle{
+            margin: 10px 0 0 0;
+            color: #fff;
+            font-size: 18px;
+        }
+    }
+}
+
 //woocommerce
 .orderby{
     margin-bottom: 1em;
+}
+//footer
+.footer-text{
+    text-align: right;
 }
