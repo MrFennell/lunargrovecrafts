@@ -28,6 +28,46 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import './base/wordpress';
 @import './base/forms';
 
+@font-face {
+
+
+
+    // font-family: 'icomoon';
+    // src:  url('fonts/icomoon.eot?gj9yuh');
+    // src:  url('fonts/icomoon.eot?gj9yuh#iefix') format('embedded-opentype'),
+    //   url('fonts/icomoon.ttf?gj9yuh') format('truetype'),
+    //   url('fonts/icomoon.woff?gj9yuh') format('woff'),
+    //   url('fonts/icomoon.svg?gj9yuh#icomoon') format('svg');
+    // font-weight: normal;
+    // font-style: normal;
+    // font-display: block;
+  
+    font-family: 'icomoon';
+    src:  url('./assets/css/fonts/fontsfonts/icomoon.eot?gj9yuh');
+    src:  url('./assets/css/fonts/icomoon.eot?gj9yuh#iefix') format('embedded-opentype'),
+      url('./assets/css/fonts/icomoon.ttf?gj9yuh') format('truetype'),
+      url('./assets/css/fonts/icomoon.woff?gj9yuh') format('woff'),
+      url('./assets/css/fonts/icomoon.svg?gj9yuh#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 
 $brand-blue: #001225;
 $light-blue:#003266;
@@ -35,6 +75,27 @@ $dark-blue:#002348;
 $dark-brown: #391300;
 $dark-gold: #392c00;
 $light-gold: #9d7900;
+
+.icon-cart:before {
+    content: "\e93a";
+  }
+  .icon-mail:before {
+    content: "\ea83";
+  }
+  .icon-facebook:before {
+    content: "\ea90";
+    font-size: 20px;
+  }
+  .icon-instagram:before {
+    content: "\ea92";
+    font-size: 20px;
+  }
+  .icon-twitter:before {
+    content: "\ea96";
+    font-size: 20px;
+  }
+  
+
 a{
     color: $brand-blue;
 }
@@ -119,6 +180,8 @@ header{
     margin-bottom: 1em;
 }
 //footer
-.footer-text{
-    text-align: right;
+.footer-info{
+    display: flex;
+    float: right;
+    align-items: baseline;
 }

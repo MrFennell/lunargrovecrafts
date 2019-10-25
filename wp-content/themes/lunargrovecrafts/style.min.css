@@ -1134,6 +1134,13 @@ embed,iframe,object{max-width:100%}
 .gallery-columns-8 .gallery-item{max-width:12.5%}
 .gallery-columns-9 .gallery-item{max-width:11.11%}
 .gallery-caption{display:block}
+@font-face{font-family:'icomoon';src:url("./assets/css/fonts/fontsfonts/icomoon.eot?gj9yuh");src:url("./assets/css/fonts/icomoon.eot?gj9yuh#iefix") format("embedded-opentype"),url("./assets/css/fonts/icomoon.ttf?gj9yuh") format("truetype"),url("./assets/css/fonts/icomoon.woff?gj9yuh") format("woff"),url("./assets/css/fonts/icomoon.svg?gj9yuh#icomoon") format("svg");font-weight:normal;font-style:normal;font-display:block}
+[class^="icon-"],[class*=" icon-"]{font-family:'icomoon' !important;speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.icon-cart:before{content:"\e93a"}
+.icon-mail:before{content:"\ea83"}
+.icon-facebook:before{content:"\ea90";font-size:20px}
+.icon-instagram:before{content:"\ea92";font-size:20px}
+.icon-twitter:before{content:"\ea96";font-size:20px}
 a{color:#001225}
 a:hover{color:#9d7900;text-decoration:none}
 h1,.h1{color:#001225;margin:0 auto 1.5rem auto;text-align:center}
@@ -1148,7 +1155,7 @@ header #front-page-header-text .front-page-header-logo{width:500px;margin-top:30
 header #front-page-header-text .header-title{width:700px;color:#fff}
 header #front-page-header-text .header-subtitle{margin:10px 0 0 0;color:#fff;font-size:18px}
 .orderby{margin-bottom:1em}
-.footer-text{text-align:right}
+.footer-info{display:-webkit-box;display:-ms-flexbox;display:flex;float:right;-webkit-box-align:baseline;-ms-flex-align:baseline;align-items:baseline}
 @media(prefers-reduced-motion:reduce){.form-control,input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="number"],input[type="tel"],input[type="range"],input[type="date"],input[type="month"],input[type="week"],input[type="time"],input[type="datetime"],input[type="datetime-local"],input[type="color"],textarea,select{-webkit-transition:none;transition:none}
 .form-range::-webkit-slider-thumb{-webkit-transition:none;transition:none}
 .form-range::-moz-range-thumb{-webkit-transition:none;transition:none}

@@ -15,7 +15,18 @@
 
 	<footer id="colophon" class="site-footer container">
 		<div class="site-info">
-			<p class="footer-text">©2019 Lunar Grove Crafts</p>
+		
+			<div class="footer-info">
+				
+				<p>©2019 Lunar Grove Crafts </p>
+					
+				<a href="#" ><span class="icon-facebook"></span></a>
+				<a href="#" ><span class="icon-twitter"></span></a>
+				<a href="#" ><span class="icon-instagram"></span></a>
+			
+			
+				
+			</div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
