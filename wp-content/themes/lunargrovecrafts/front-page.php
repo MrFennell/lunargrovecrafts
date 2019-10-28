@@ -1,7 +1,9 @@
 <?php get_header();?>
     <div class="container">
     
-            <h1 class="front-page"><?php the_field('introduction_title');?></h1>
+            <!-- <h1 class="front-page">
+           <?php //the_field('introduction_title');?>
+            </h1> -->
             
             <p><?php the_field('introduction_body');?></p>
 
@@ -21,7 +23,7 @@
                             <p><?php echo $potm->post_content ?></p>
                         </div>
                         <div class="col">
-                            <img style="max-width:500px" src="<?php echo get_the_post_thumbnail_url()  ?>" />
+                            <img id="pick-of-the-month-img" src="<?php echo get_the_post_thumbnail_url()  ?>" />
                         </div>
                     </div>
                     <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>

@@ -28,17 +28,15 @@
 		
 		<?php if ( is_front_page() ) : ?>
 			<div id="hero">
-				
 				<?php 
-				
-				if( has_post_thumbnail() ):?> <!-- #set hero image -->
+					if( has_post_thumbnail() ):?> <!-- #set hero image -->
 					<style type="text/css">
 						#hero {
 							background-image: url("<?php echo esc_url(get_the_post_thumbnail_url()); ?>");
 						}
 					</style>
 				<?php endif; ?>
-				<nav id="site-navigation" class="navbar navbar-expand-md bg-dark"><!-- #site-navigation -->
+				<nav id="site-navigation" class="navbar navbar-dark navbar-expand-sm bg-dark"><!-- #site-navigation -->
 					<a class="navbar-brand" href="#">
 					<?php $logo = get_custom_logo();
 						if ($logo):
@@ -46,8 +44,7 @@
 						endif;?>
 					</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-					
-					<span class="navbar-toggler-icon"></span>
+						<span class="navbar-toggler-icon"></span>
 					</button>
 					<?php
 						wp_nav_menu( array(
@@ -62,9 +59,9 @@
 				</nav>
 				<div id="front-page-header-text">
 					<?php
-					$image = get_field('header_logo');
-					if( !empty( $image ) ): ?>
-						<img class="front-page-header-logo" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+						$image = get_field('header_logo');
+						if( !empty( $image ) ): ?>
+							<img class="front-page-header-logo" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
 					<?php endif;
 					
 					$header_title = get_field('header_title');

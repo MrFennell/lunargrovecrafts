@@ -1138,9 +1138,6 @@ embed,iframe,object{max-width:100%}
 [class^="icon-"],[class*=" icon-"]{font-family:'icomoon' !important;speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .icon-cart:before{content:"\e93a"}
 .icon-mail:before{content:"\ea83"}
-.icon-facebook:before{content:"\ea90";font-size:20px}
-.icon-instagram:before{content:"\ea92";font-size:20px}
-.icon-twitter:before{content:"\ea96";font-size:20px}
 a{color:#001225}
 a:hover{color:#9d7900;text-decoration:none}
 h1,.h1{color:#001225;margin:0 auto 1.5rem auto;text-align:center}
@@ -1151,11 +1148,16 @@ header nav .custom-logo-link img{height:85px;padding:4px}
 header nav #primary-menu li{font-size:1rem;font-weight:400;line-height:1.5;padding-right:.5rem;padding-left:.5rem;margin-left:20px}
 header nav #primary-menu li a{color:#fff;float:left;font-weight:400;font-size:1rem;line-height:1.5;list-style:none;padding:.5rem 1rem}
 header #front-page-header-text{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:relative;font-size:3rem}
-header #front-page-header-text .front-page-header-logo{width:500px;margin-top:30px}
-header #front-page-header-text .header-title{width:700px;color:#fff}
+header #front-page-header-text .front-page-header-logo{max-width:500px;margin-top:30px}
+header #front-page-header-text .header-title{color:#fff}
 header #front-page-header-text .header-subtitle{margin:10px 0 0 0;color:#fff;font-size:18px}
+#pick-of-the-month-img{max-width:100%}
 .orderby{margin-bottom:1em}
-.footer-info{display:-webkit-box;display:-ms-flexbox;display:flex;float:right;-webkit-box-align:baseline;-ms-flex-align:baseline;align-items:baseline}
+footer .footer-info{display:-webkit-box;display:-ms-flexbox;display:flex;float:right;-webkit-box-align:baseline;-ms-flex-align:baseline;align-items:baseline}
+footer .footer-info a{margin-left:.5em}
+footer .footer-info .icon-facebook:before{content:"\ea90";font-size:20px}
+footer .footer-info .icon-instagram:before{content:"\ea92";font-size:20px}
+footer .footer-info .icon-twitter:before{content:"\ea96";font-size:20px}
 @media(prefers-reduced-motion:reduce){.form-control,input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="number"],input[type="tel"],input[type="range"],input[type="date"],input[type="month"],input[type="week"],input[type="time"],input[type="datetime"],input[type="datetime-local"],input[type="color"],textarea,select{-webkit-transition:none;transition:none}
 .form-range::-webkit-slider-thumb{-webkit-transition:none;transition:none}
 .form-range::-moz-range-thumb{-webkit-transition:none;transition:none}
