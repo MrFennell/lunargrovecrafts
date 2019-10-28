@@ -87,8 +87,16 @@ ul.products li.product {
 	list-style: none;
 	position: relative;
 	margin-bottom: 2em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
+ul.products li.product a{
 
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 ul.products li.product .woocommerce-loop-product__title {
 	font-size: 1rem;
 }
