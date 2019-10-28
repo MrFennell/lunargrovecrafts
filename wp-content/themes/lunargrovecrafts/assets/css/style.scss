@@ -26,6 +26,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import './base/bootstrap_overrides';
 @import './base/wordpress';
 @import './base/forms';
+
 @font-face {
 
     font-family: 'icomoon';
@@ -61,14 +62,17 @@ $dark-brown: #391300;
 $dark-gold: #392c00;
 $light-gold: #9d7900;
 
-.icon-cart:before {
-    content: "\e93a";
-  }
+// .icon-cart:after {
+//     content: "\e93a";
+//   }
   .icon-mail:before {
     content: "\ea83";
   }
-
-  
+  .icon-cart:before {
+    content: "\e93a";
+    float:left;
+    position: relative;
+  }
 
 a{
     color: $brand-blue;
@@ -82,7 +86,9 @@ h1 {
     margin: 0 auto 1.5rem auto; 
     text-align: center;
 }
-
+h1, h2{
+    font-family: 'Amatic SC', cursive;
+}
 
 h2.front-page {
     color: $brand-blue;
@@ -90,6 +96,7 @@ h2.front-page {
 }
 
 header{
+    margin-bottom: 22px;
     #hero{
         width: 100%;
         height: 500px;
@@ -97,6 +104,21 @@ header{
         background-size: cover;
         background-repeat: no-repeat;
         position: relative;
+    }
+    .inner-page-header{
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        .header-text{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            font-size: 3rem;
+            color: #fff;
+        }
     }
     nav{
         opacity: 0.9;
@@ -131,7 +153,10 @@ header{
 
         .front-page-header-logo{
             max-width: 500px;
-            margin-top: 30px;
+            margin-top: 40px;
+        }
+        h1{
+            margin:0;
         }
         .header-title{
             color: #fff;
@@ -142,6 +167,7 @@ header{
             font-size: 18px;
         }
     }
+    
 }
 //Pick of the Month
 #pick-of-the-month-img{
@@ -151,9 +177,12 @@ header{
 .orderby{
     margin-bottom: 1em;
 }
+
+
+
 //footer
 footer{
-
+    clear: both;
     .footer-info{
         display: flex;
         float: right;

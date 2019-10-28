@@ -14,8 +14,8 @@
                    
                     $potm = get_field('pick_of_the_month');
                     if($potm):
-                    $post = $potm;
-                    setup_postdata( $post ); 
+                        $post = $potm;
+                        setup_postdata( $post ); 
                     ?>
                     <div class="row">
                         <div class="col">

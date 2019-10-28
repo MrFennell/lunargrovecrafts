@@ -16,7 +16,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
 
@@ -27,12 +27,15 @@
 	<header id="masthead" class="site-header">
 		
 		<?php if ( is_front_page() ) : ?>
-			<div id="hero">
+			<div id="hero"><!-- header for front page-->
 				<?php 
-					if( has_post_thumbnail() ):?> <!-- #set hero image -->
+					if( has_post_thumbnail() ):
+					$post = get_post();
+					$size = 'large';					
+						?> <!-- #set hero image -->
 					<style type="text/css">
 						#hero {
-							background-image: url("<?php echo esc_url(get_the_post_thumbnail_url()); ?>");
+							background-image: url("<?php echo esc_url(get_the_post_thumbnail_url($post, $size )); ?>");
 						}
 					</style>
 				<?php endif; ?>
@@ -59,6 +62,7 @@
 				</nav>
 				<div id="front-page-header-text">
 					<?php
+	
 						$image = get_field('header_logo');
 						if( !empty( $image ) ): ?>
 							<img class="front-page-header-logo" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
@@ -75,6 +79,47 @@
 						
 						<?php endif;?>
 				</div>
+			</div>
+			<?php else:?><!--  Header styles for product and non-front pages. -->
+				<div class="inner-page-header">
+					<?php 
+						// if( has_post_thumbnail() ):?> <!-- #set image for headers of child pages -->
+						<!-- <style type="text/css"> -->
+							<!-- .inner-page-header { -->
+								<!-- background-image: url("<?php #echo esc_url(get_the_post_thumbnail_url()); ?>"); -->
+							<!-- } -->
+						<!-- </style> -->
+					<?php #endif; ?>
+					<nav id="site-navigation" class="navbar navbar-dark navbar-expand-sm bg-dark"><!-- #site-navigation -->
+						<a class="navbar-brand" href="#">
+						<?php $logo = get_custom_logo();
+							if ($logo):
+								echo get_custom_logo();
+							endif;?>
+						</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<?php
+							wp_nav_menu( array(
+								'theme_location' => 'menu-1',
+								'menu_id'        => 'primary-menu',
+								'menu_class' => 'navbar-nav',
+								'container_id' => 'navbarNav',
+								'container_class' => 'collapse navbar-collapse',
+							) );
+						?>
+						<button class="icon-cart"> </button>
+
+					</nav>
+					<!-- <div class="header-text">
+						<?php 
+						#$title = wp_title($sep = '');
+						#if( !empty( $title ) ): ?>
+							<h1 class="header-title"><?php# echo $title ?></h1>
+						<?php #endif; ?>
+						
+					</div> -->
 			</div>
 		<?php endif;?>
 		
