@@ -1154,6 +1154,7 @@ header #front-page-header-text .header-title{color:#fff}
 header #front-page-header-text .header-subtitle{margin:10px 0 0 0;color:#fff;font-size:18px}
 #pick-of-the-month-img{max-width:100%}
 .orderby{margin-bottom:1em}
+.price{text-align:center}
 footer{clear:both}
 footer .footer-info{display:-webkit-box;display:-ms-flexbox;display:flex;float:right;-webkit-box-align:baseline;-ms-flex-align:baseline;align-items:baseline}
 footer .footer-info a{margin-left:.5em}

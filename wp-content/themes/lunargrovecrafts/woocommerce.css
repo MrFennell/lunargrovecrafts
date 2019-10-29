@@ -148,8 +148,8 @@ ul.products li.product .button {
 
 .single-product div.product {
 	content: "";
-	display: table;
-	table-layout: fixed;
+	/* display: table;
+	table-layout: fixed; */
 	position: relative;
 }
 
@@ -287,7 +287,7 @@ ul.products li.product .button {
 	margin: 0;
 	padding: 0;
 	content: "";
-	display: table;
+	/* display: table; */
 	table-layout: fixed;
 }
 
