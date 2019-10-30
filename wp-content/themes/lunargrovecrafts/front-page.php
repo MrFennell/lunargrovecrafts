@@ -28,8 +28,8 @@
 						  <div class="row">
 								<div class="col">
 									 <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-									 <p><?php echo $potm->post_content ?></p>
-									 <p>Starting at $<?php echo $product->get_price(); ?>.00</p>
+                                     <p><?php echo $potm->post_content ?></p>
+                                     <p>Starting at $<?php echo number_format( $product->get_price() ,2);?></p>
 								</div>
 
 								<div class="col">
