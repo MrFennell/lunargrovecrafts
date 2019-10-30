@@ -121,18 +121,28 @@ header{
         }
     }
     nav{
+        z-index: 99999;
         opacity: 0.9;
         .custom-logo-link img{
             height: 85px;
             padding: 4px;
+        }
+        #primary-menu ul{
+            background-color: $brand-blue;
+            padding: 0;
+            margin: 0;
         }
         #primary-menu li {
             font-size: 1rem;
             font-weight: 400;
             line-height: 1.5;
             padding-right: .5rem;
-            padding-left: .5rem;
             margin-left: 20px;
+            
+            a:hover{
+                color: $light-gold;
+                background-color: $brand-blue;
+            }
             a{
                 color: #fff;
                 float: left;
@@ -140,7 +150,10 @@ header{
                 font-size: 1rem;
                 line-height: 1.5;
                 list-style: none;
-                padding: .5rem 1rem;
+                
+            }
+            .dropdown-item{
+                padding: 11px 20px 13px 9px;
             }
         }
     }

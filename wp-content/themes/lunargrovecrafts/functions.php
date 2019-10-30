@@ -67,7 +67,7 @@ if ( ! function_exists( 'lunargrovecrafts_setup' ) ) :
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
-
+        
 		/**
 		 * Add support for core custom logo.
 		 *
@@ -171,5 +171,13 @@ add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 function cc_mime_types($mimes) {
 	$mimes['svg'] = 'image/svg+xml';
 	return $mimes;
-   }
-   add_filter('upload_mimes', 'cc_mime_types');
+}
+add_filter('upload_mimes', 'cc_mime_types');
+
+/**
+ * Register Custom Navigation Walker
+ */
+function register_navwalker(){
+	require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+}
+add_action( 'after_setup_theme', 'register_navwalker' );

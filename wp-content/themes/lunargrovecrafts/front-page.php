@@ -30,9 +30,6 @@
 									 <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 									 <p><?php echo $potm->post_content ?></p>
 									 <p>Starting at $<?php echo $product->get_price(); ?>.00</p>
-									 <?php $var = $product->get_price(); ?>
-									 <p><?php echo $var ?></p>
-
 								</div>
 
 								<div class="col">
@@ -47,48 +44,47 @@
 					<?php 
 					$counter = 0;
 					if( have_rows('category_fields') ): 
-								
-								while( have_rows('category_fields') ): the_row(); 
-									$counter = $counter + 1;
-									if(($counter % 2)==1):?> <!-- layout with pic on left -->
-										<div class="row">
-											<div class="col">
-													<?php 
-														$image = get_sub_field('category_image');
-														$size = 'medium'; 
-														if( $image ) {
-																echo wp_get_attachment_image( $image, $size, false, array( "class" => "category-image" ));
-														}?>
-												</div>
-												<div class="col">
-													<?php $cat_link = get_sub_field('category_link')?>
-													<a href="<?php echo get_category_link($cat_link) ?>">
-														<h3 class="category-title"><?php echo the_sub_field('category_title');?></h3>
-													</a>
-													<p class="category-copy"><?php echo get_sub_field('category_copy')?></p>
-											</div>
+						while( have_rows('category_fields') ): the_row(); 
+							$counter = $counter + 1;
+							if(($counter % 2)==1):?> <!-- layout with pic on left -->
+								<div class="row">
+									<div class="col">
+											<?php 
+												$image = get_sub_field('category_image');
+												$size = 'medium'; 
+												if( $image ) {
+														echo wp_get_attachment_image( $image, $size, false, array( "class" => "category-image" ));
+												}?>
 										</div>
-									<?php endif;
-									if(($counter % 2)==0):	?> <!-- layout with pic on right -->
-										<div class="row">
-											<div class="col">
-												<?php $cat_link = get_sub_field('category_link')?>
-												<a href="<?php echo get_category_link($cat_link) ?>">
-													<h3 class="category-title"><?php echo the_sub_field('category_title');?></h3>
-												</a>
-												<p class="category-copy"><?php echo get_sub_field('category_copy')?></p>
-											</div>
-											<div class="col">
-												<?php 
-													$image = get_sub_field('category_image');
-													$size = 'medium'; 
-													if( $image ) {
-															echo wp_get_attachment_image( $image, $size , false, array( "class" => "category-image" ) );
-													}?>
-											</div>
-										</div>
-									<?php endif;
-								endwhile; 	
+										<div class="col">
+											<?php $cat_link = get_sub_field('category_link')?>
+											<a href="<?php echo get_category_link($cat_link) ?>">
+												<h3 class="category-title"><?php echo the_sub_field('category_title');?></h3>
+											</a>
+											<p class="category-copy"><?php echo get_sub_field('category_copy')?></p>
+									</div>
+								</div>
+							<?php endif;
+							if(($counter % 2)==0):	?> <!-- layout with pic on right -->
+								<div class="row">
+									<div class="col">
+										<?php $cat_link = get_sub_field('category_link')?>
+										<a href="<?php echo get_category_link($cat_link) ?>">
+											<h3 class="category-title"><?php echo the_sub_field('category_title');?></h3>
+										</a>
+										<p class="category-copy"><?php echo get_sub_field('category_copy')?></p>
+									</div>
+									<div class="col">
+										<?php 
+											$image = get_sub_field('category_image');
+											$size = 'medium'; 
+											if( $image ) {
+													echo wp_get_attachment_image( $image, $size , false, array( "class" => "category-image" ) );
+											}?>
+									</div>
+								</div>
+							<?php endif;
+						endwhile; 	
 					 endif; ?>
 				</div>
 
