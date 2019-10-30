@@ -1,10 +1,6 @@
 <?php get_header();?>
 	 <div class="container">
 
-				<!-- <h1 class="front-page">
-			  <?php //the_field('introduction_title');?>
-				</h1> -->
-
 				<p><?php the_field('introduction_body');?></p>
 
 				<div id="pick-of-the-month">
@@ -15,10 +11,6 @@
 						  $potm = get_field('pick_of_the_month');
 						  $ID =  $potm->ID;
 						  $product = wc_get_product($ID);
-						  // debug to see all acf fields
-						  // echo '<pre>';
-						  //     print_r( get_field('pick_of_the_month')  );
-						  // echo '</pre>';
 
 						  if($potm):
 								$post = $potm;

@@ -40,12 +40,10 @@
 					</style>
 				<?php endif; ?>
 				<nav id="site-navigation" class="navbar navbar-dark navbar-expand-sm bg-dark"><!-- #site-navigation -->
-					<a class="navbar-brand" href="#">
-					<?php $logo = get_custom_logo();
-						if ($logo):
-							echo get_custom_logo();
-						endif;?>
-					</a>
+                    <?php $logo = get_custom_logo();
+                    if ($logo):
+                        echo get_custom_logo();
+                    endif;?>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
@@ -86,21 +84,11 @@
 			</div>
 			<?php else:?><!--  Header styles for product and non-front pages. -->
 				<div class="inner-page-header">
-					<?php 
-						// if( has_post_thumbnail() ):?> <!-- #set image for headers of child pages -->
-						<!-- <style type="text/css"> -->
-							<!-- .inner-page-header { -->
-								<!-- background-image: url("<?php #echo esc_url(get_the_post_thumbnail_url()); ?>"); -->
-							<!-- } -->
-						<!-- </style> -->
-					<?php #endif; ?>
 					<nav id="site-navigation" class="navbar navbar-dark navbar-expand-sm bg-dark"><!-- #site-navigation -->
-						<a class="navbar-brand" href="#">
 						<?php $logo = get_custom_logo();
 							if ($logo):
 								echo get_custom_logo();
 							endif;?>
-						</a>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="navbar-toggler-icon"></span>
 						</button>
@@ -117,17 +105,7 @@
                                 'walker'          => new WP_Bootstrap_Navwalker(),
                             ) );
                         ?>
-						<button class="icon-cart"> </button>
-
 					</nav>
-					<!-- <div class="header-text">
-						<?php 
-						#$title = wp_title($sep = '');
-						#if( !empty( $title ) ): ?>
-							<h1 class="header-title"><?php# echo $title ?></h1>
-						<?php #endif; ?>
-						
-					</div> -->
 			</div>
 		<?php endif;?>
 		

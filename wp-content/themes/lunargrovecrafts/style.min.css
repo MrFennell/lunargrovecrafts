@@ -1148,7 +1148,7 @@ header nav .custom-logo-link img{height:85px;padding:4px}
 header nav #primary-menu ul{background-color:#001225;padding:0;margin:0}
 header nav #primary-menu li{font-size:1rem;font-weight:400;line-height:1.5;padding-right:.5rem;margin-left:20px}
 header nav #primary-menu li a:hover{color:#9d7900;background-color:#001225}
-header nav #primary-menu li a{color:#fff;float:left;font-weight:400;font-size:1rem;line-height:1.5;list-style:none}
+header nav #primary-menu li a{color:#fff;float:right;font-weight:400;font-size:1rem;line-height:1.5;list-style:none}
 header nav #primary-menu li .dropdown-item{padding:11px 20px 13px 9px}
 header #front-page-header-text{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:relative;font-size:3rem}
 header #front-page-header-text .front-page-header-logo{max-width:500px;margin-top:40px}
@@ -1158,6 +1158,11 @@ header #front-page-header-text .header-subtitle{margin:10px 0 0 0;color:#fff;fon
 #pick-of-the-month-img{max-width:100%}
 .orderby{margin-bottom:1em}
 .price{text-align:center}
+.woocommerce-product-attributes{margin-bottom:1em}
+.woocommerce-product-attributes tr{vertical-align:text-top;border:1px solid #ced4da}
+.woocommerce-product-attributes th{padding:0 20px;vertical-align:middle}
+.woocommerce-product-attributes td{border:1px solid #ced4da;padding:20px}
+.woocommerce-product-attributes td p{margin:0}
 footer{clear:both}
 footer .footer-info{display:-webkit-box;display:-ms-flexbox;display:flex;float:right;-webkit-box-align:baseline;-ms-flex-align:baseline;align-items:baseline}
 footer .footer-info a{margin-left:.5em}
@@ -2138,9 +2143,11 @@ footer .footer-info .icon-twitter:before{content:"\ea96";font-size:20px}
 }@media(max-width:767.98px){.table-responsive-md{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
 .table-responsive-md>.table-bordered{border:0}
 .navbar-expand-md>.container,.navbar-expand-md>.container-fluid,.navbar-expand-md>.container-sm,.navbar-expand-md>.container-md,.navbar-expand-md>.container-lg,.navbar-expand-md>.container-xl{padding-right:0;padding-left:0}
+}@media screen and (max-width:576px){header nav #primary-menu li .dropdown-item{text-align:right}
 }@media(max-width:575.98px){.table-responsive-sm{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
 .table-responsive-sm>.table-bordered{border:0}
 .navbar-expand-sm>.container,.navbar-expand-sm>.container-fluid,.navbar-expand-sm>.container-sm,.navbar-expand-sm>.container-md,.navbar-expand-sm>.container-lg,.navbar-expand-sm>.container-xl{padding-right:0;padding-left:0}
+}@media screen and (max-width:450px){header nav .custom-logo-link img{height:60px}
 }@media print{.d-print-none{display:none !important}
 .d-print-inline{display:inline !important}
 .d-print-inline-block{display:inline-block !important}

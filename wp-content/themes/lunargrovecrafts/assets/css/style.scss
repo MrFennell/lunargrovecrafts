@@ -126,6 +126,9 @@ header{
         .custom-logo-link img{
             height: 85px;
             padding: 4px;
+            @media screen and (max-width: 450px){
+                height: 60px;
+            }
         }
         #primary-menu ul{
             background-color: $brand-blue;
@@ -145,15 +148,19 @@ header{
             }
             a{
                 color: #fff;
-                float: left;
+                float: right;
                 font-weight: 400;
                 font-size: 1rem;
                 line-height: 1.5;
                 list-style: none;
                 
             }
-            .dropdown-item{
+            .dropdown-item{ //bootstrap sub-menu
                 padding: 11px 20px 13px 9px;
+                
+                @media screen and (max-width: 576px){
+                    text-align: right;
+                }
             }
         }
     }
@@ -192,6 +199,24 @@ header{
 }
 .price{
     text-align: center;
+}
+.woocommerce-product-attributes{
+    margin-bottom: 1em;
+    tr{
+        vertical-align: text-top;
+        border: 1px solid #ced4da;
+    }
+    th{
+        padding: 0 20px;
+        vertical-align: middle;
+    }
+    td{
+        border: 1px solid #ced4da;
+        padding: 20px;
+        p{
+            margin: 0;
+        }
+    }
 }
 //footer
 footer{
