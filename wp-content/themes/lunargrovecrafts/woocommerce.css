@@ -172,7 +172,7 @@ ul.products li.product .button {
 .single-product div.product .woocommerce-product-gallery .flex-control-thumbs {
 	content: "";
 	display: flex;
-	/* table-layout: fixed; */
+	flex-wrap: wrap;
 	margin: 0;
 	padding: 0;
 }

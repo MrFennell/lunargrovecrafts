@@ -1156,6 +1156,8 @@ header #front-page-header-text h1,header #front-page-header-text .h1{margin:0}
 header #front-page-header-text .header-title{color:#fff}
 header #front-page-header-text .header-subtitle{margin:10px 0 0 0;color:#fff;font-size:18px}
 #pick-of-the-month-img{max-width:100%}
+.woocommerce-product-gallery__image{max-width:600px;max-height:400px}
+.flex-viewport{width:600px}
 .orderby{margin-bottom:1em}
 .price{text-align:center}
 .woocommerce-product-attributes{margin-bottom:1em}
