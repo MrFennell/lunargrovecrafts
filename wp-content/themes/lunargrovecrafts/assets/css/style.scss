@@ -61,6 +61,7 @@ $dark-blue:#002348;
 $dark-brown: #391300;
 $dark-gold: #392c00;
 $light-gold: #9d7900;
+$brand-font: Amatic SC, cursive;
 
 // .icon-cart:after {
 //     content: "\e93a";
@@ -87,7 +88,8 @@ h1 {
     text-align: center;
 }
 h1, h2{
-    font-family: 'Amatic SC', cursive;
+    font-family: $brand-font;
+    font-weight: bold;
 }
 
 h2.front-page {
@@ -141,17 +143,19 @@ header{
                 height: 60px;
             }
         }
-        #primary-menu ul{
+        #top-nav, #account-cart ul{
             background-color: $brand-blue;
             padding: 0;
             margin: 0;
         }
-        #primary-menu li {
+        #top-nav, #account-cart li {
             font-size: 1rem;
             font-weight: 400;
             line-height: 1.5;
-            padding-right: .5rem;
-            margin-left: 20px;
+            background-color: $brand-blue;
+            font-family: $brand-font;
+            font-size: 2rem;
+            white-space: nowrap;
             
             a:hover{
                 color: $light-gold;
@@ -161,18 +165,32 @@ header{
                 color: #fff;
                 float: right;
                 font-weight: 400;
-                font-size: 1rem;
+                background-color: $brand-blue;
                 line-height: 1.5;
                 list-style: none;
                 
             }
+            ul.dropdown-menu {
+                font-size: 2rem;
+                padding: 0;
+                border: 0;
+            }
             .dropdown-item{ //bootstrap sub-menu
-                padding: 11px 20px 13px 9px;
-                
+                padding: 11px 20px 13px 19px;
+                margin: 0;
                 @media screen and (max-width: 576px){
                     text-align: right;
                 }
             }
+            ul li{
+                margin-left: 0;
+            }
+        }
+        #top-nav li{
+            margin-left: 22px;
+        }
+        #account-cart li{
+            margin-left: 22px;
         }
     }
     #front-page-header-content{
@@ -183,9 +201,9 @@ header{
         font-size: 3rem;
 
         .front-page-header-logo{
-            width: 600px;
+            width: 800px;
             margin: 7% 0;
-            @media  screen and (max-width : 768px){
+            @media  screen and (max-width : 810px){
                 width: 90%;
             }
            
@@ -203,6 +221,37 @@ header{
         }
     }
     
+}
+#introduction{
+    @media  screen and (min-width : 768px){
+        width: 615px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+}
+#front-page-categories {
+    .categories{
+        height: 50vh;
+        .category-copy-container{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .category-copy{
+            @media screen and (min-width: 768px){
+                padding: 0 128px;
+            }
+           
+        }
+    }
+    img{
+        object-fit: cover;
+        width: 100%;
+        height: -webkit-fill-available;
+    }
 }
 section{
     margin-bottom: 80px;
