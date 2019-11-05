@@ -62,7 +62,7 @@
 					?>
 		
 				</nav>
-				<div id="front-page-header-text">
+				<div id="front-page-header-content">
 					<?php
 	
 						$image = get_field('header_logo');

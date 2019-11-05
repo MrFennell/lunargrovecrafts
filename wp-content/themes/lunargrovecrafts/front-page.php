@@ -1,9 +1,16 @@
 <?php get_header();?>
 	 <div class="container">
-
-				<p><?php the_field('introduction_body');?></p>
-
-				<div id="pick-of-the-month">
+                <section >
+                    <?php $introduction_header = get_field('introduction_header');
+                        if( !empty( $introduction_header ) ): ?>
+                            <h2 class="front-page"><?php echo $introduction_header ?></h2>
+                    <?php endif; ?>
+                    <?php $introduction_body = get_field('introduction_body');
+                        if( !empty( $introduction_body ) ): ?>
+                            <p><?php the_field('introduction_body');?></p>
+                    <?php endif; ?>
+                </section>
+				<section id="pick-of-the-month">
 
 					 <h2 class="front-page"><?php the_field('pick_of_the_month_title');?></h2>
 					 <?php
@@ -30,9 +37,9 @@
 						  </div>
 						  <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 						  <?php endif; ?>
-				</div>
+				</section>
 
-				<div id="front-page-categories">
+				<section id="front-page-categories">
 					<?php 
 					$counter = 0;
 					if( have_rows('category_fields') ): 
@@ -78,7 +85,7 @@
 							<?php endif;
 						endwhile; 	
 					 endif; ?>
-				</div>
+				</section>
 
 
 	 </div>
