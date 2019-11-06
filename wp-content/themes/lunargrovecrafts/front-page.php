@@ -1,5 +1,5 @@
 <?php get_header();?>
-	 <div class="container-fluid">
+	 <div class="container-fluid" id="front-page">
                 <section id="introduction">
                     <?php $introduction_header = get_field('introduction_header');
                         if( !empty( $introduction_header ) ): ?>
@@ -10,35 +10,51 @@
                             <p><?php the_field('introduction_body');?></p>
                     <?php endif; ?>
                 </section>
-				<section id="pick-of-the-month">
+                <?php if(have_rows('promotions')):
+                    
+                    $promotions_link_text = get_field('promotions_link_text');?>
+                <section id="promotions">
+                    <div class="swiper-container">
 
-					 <h2 class="front-page"><?php the_field('pick_of_the_month_title');?></h2>
-					 <?php
+                        <div class="swiper-wrapper">
+                         <?php while( have_rows('promotions') ): the_row(); 
+                            $promotion_title = get_sub_field('promotion_title');
+                            $promotion_description = get_sub_field('promotion_description');
+                            $promotion_link = get_sub_field('promotion_link');
+                            $promotion_background_image = get_sub_field('promotion_background_image');
+                            $size = 'large';
+                            ?>
+                            
+                            <div class="swiper-slide">
+                                
+                                <?php if( $promotion_title ): ?>
+                                    <p class="promotion-title"><?php echo $promotion_title; ?></p>
+                                    
+                                <?php endif; ?>
+                                <?php if( $promotion_description ): ?>
+                                    <p class="promotion_description"><?php echo $promotion_description; ?></p>
+                                <?php endif; 
+                                if( $promotion_background_image ): 
+                                    echo wp_get_attachment_image( $promotion_background_image, $size );
+                                endif;
+                                if( $promotions_link_text ): ?>
+                                    <p class="promotions_link_text"><a href="<?php echo $promotion_link ?>"><?php echo $promotions_link_text; ?></a></p>
+                                <?php endif; 
+                                
+                                ?>
+                           
+                            </div>
 
-						  $potm = get_field('pick_of_the_month');
-						  $ID =  $potm->ID;
-						  $product = wc_get_product($ID);
+                            <?php endwhile; ?>
+                        </div>
+                        
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
 
-						  if($potm):
-								$post = $potm;
-								setup_postdata( $post );
-						  ?>
-
-						  <div class="row">
-								<div class="col">
-									 <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                                     <p><?php echo $potm->post_content ?></p>
-                                     <p>Starting at $<?php echo number_format( $product->get_price() ,2);?></p>
-								</div>
-
-								<div class="col">
-									 <img id="pick-of-the-month-img" src="<?php echo get_the_post_thumbnail_url()  ?>" />
-								</div>
-						  </div>
-						  <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-						  <?php endif; ?>
-				</section>
-
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </section>
+                <?php endif;?>
 				<section id="front-page-categories">
 					<?php 
 					$counter = 0;
@@ -48,13 +64,16 @@
                             if(($counter % 2)==1):?> <!-- layout with pic on left -->
                                 <div class="categories">
                                     <div class="row">
-                                        <div class="col ">
-                                                <?php 
-                                                    $image = get_sub_field('category_image');
-                                                    $size = 'large'; 
-                                                    if( $image ) {
-                                                            echo wp_get_attachment_image( $image, $size, false, array( "class" => "category-image" ));
-                                                    }?>
+                                        <div class="col-sm">
+                                            <?php 
+                                                $image = get_sub_field('category_image');
+                                                $size = 'large'; 
+                                                if( $image ) {?>
+                                                    <div class="category-image-container">
+                                                        <?php echo wp_get_attachment_image( $image, $size, false, array( "class" => "category-image" ));?>
+                                                    </div>
+                                                    
+                                                <?php } ?>
                                             </div>
                                             <div class="col">
                                                 <div class="category-copy-container">
@@ -73,7 +92,7 @@
                             if(($counter % 2)==0):	?> <!-- layout with pic on right -->
                                 <div class="categories">
                                     <div class="row ">
-                                        <div class="col">
+                                        <div class="col-sm order-sm-1">
                                             <div class="category-copy-container">
                                                 <div class="category-copy">
                                                     <?php $cat_link = get_sub_field('category_link')?>
@@ -84,13 +103,15 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col">
+                                        <div class="col-sm order-first order-sm-2">
                                             <?php 
                                                 $image = get_sub_field('category_image');
                                                 $size = 'large'; 
-                                                if( $image ) {
-                                                        echo wp_get_attachment_image( $image, $size , false, array( "class" => "category-image" ) );
-                                                }?>
+                                                if( $image ) {?>
+                                                    <div class="category-image-container">
+                                                        <?php echo wp_get_attachment_image( $image, $size , false, array( "class" => "category-image" ) );?>
+                                                    </div>
+                                                <?php } ?>
                                         </div>
                                     </div>
                                 </div>

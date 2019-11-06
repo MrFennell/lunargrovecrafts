@@ -26,6 +26,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import './base/bootstrap_overrides';
 @import './base/wordpress';
 @import './base/forms';
+@import './base/swiper';
 
 @font-face {
 
@@ -201,7 +202,7 @@ header{
         font-size: 3rem;
 
         .front-page-header-logo{
-            width: 800px;
+            width: 615px;
             margin: 7% 0;
             @media  screen and (max-width : 810px){
                 width: 90%;
@@ -222,35 +223,98 @@ header{
     }
     
 }
-#introduction{
-    @media  screen and (min-width : 768px){
-        width: 615px;
-        margin-left: auto;
-        margin-right: auto;
+#front-page{
+    #introduction{
+        @media  screen and (min-width : 768px){
+            width: 615px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
     }
-    
-}
-#front-page-categories {
-    .categories{
-        height: 50vh;
-        .category-copy-container{
+    #promotions{
+        min-height: 400px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+        .swiper-container {
+            width: 100%;
             height: 100%;
+          }
+          .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
             display: flex;
-            flex-direction: column;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
             justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
             align-items: center;
-        }
-        .category-copy{
-            @media screen and (min-width: 768px){
-                padding: 0 128px;
+            min-height: 400px;
+            flex-direction: column;
+            padding: 14px;
+            p{
+                max-width: 80%;
             }
-           
-        }
+            img{
+                position: absolute;
+                object-fit: cover;
+                width: 100%;
+                opacity: .1;
+                z-index: -99999;
+            }
+          }
     }
-    img{
-        object-fit: cover;
+    #front-page-categories {
+        .categories{
+            .category-copy-container{
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                @media screen and (max-width: 576px) { 
+                    padding: 2em;
+                    align-items: start;
+                }
+            }
+            .category-copy{
+                @media screen and (min-width: 576px) { 
+                    padding: 90px 58px;
+                }
+                @media screen and (min-width: 768px){
+                    padding: 190px 128px;
+                }
+                
+            
+            }
+        }
+        .category-image-container{
+        height:100%;
         width: 100%;
-        height: -webkit-fill-available;
+        @media screen and (max-width: 576px) { 
+            height: 400px;
+            }
+            img{
+                object-fit: cover;
+                width: 100%;
+                height:100%;
+                @media screen and (min-width: 576px) { 
+                    position: absolute;
+                }
+                
+
+                
+            }
+        }
     }
 }
 section{
