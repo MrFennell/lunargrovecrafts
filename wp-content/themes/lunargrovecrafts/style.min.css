@@ -1246,7 +1246,7 @@ header nav #top-nav,header nav #account-cart ul{background-color:#001225;padding
 header nav #top-nav,header nav #account-cart li{font-size:1rem;font-weight:400;line-height:1.5;background-color:#001225;font-family:Amatic SC,cursive;font-size:2rem;white-space:nowrap}
 header nav #top-nav a:hover,header nav #account-cart li a:hover{color:#9d7900;background-color:#001225}
 header nav #top-nav a,header nav #account-cart li a{color:#fff;float:right;font-weight:400;background-color:#001225;line-height:1.5;list-style:none}
-header nav #top-nav ul.dropdown-menu,header nav #account-cart li ul.dropdown-menu{font-size:2rem;padding:0;border:0}
+header nav #top-nav ul.dropdown-menu,header nav #account-cart li ul.dropdown-menu{font-size:2rem;padding:0;border:0;margin:0}
 header nav #top-nav .dropdown-item,header nav #account-cart li .dropdown-item{padding:11px 20px 13px 19px;margin:0}
 header nav #top-nav ul li,header nav #account-cart li ul li{margin-left:0}
 header nav #top-nav li{margin-left:22px}
