@@ -142,6 +142,9 @@ header{
                 height: 60px;
             }
         }
+        // .dropdown-menu{
+        //     margin:0;
+        // }
         #top-nav, #account-cart ul{
             background-color: $brand-blue;
             padding: 0;
@@ -177,7 +180,7 @@ header{
             .dropdown-item{ //bootstrap sub-menu
                 padding: 11px 20px 13px 19px;
                 margin: 0;
-                @media screen and (max-width: 576px){
+                @media screen and (max-width: 768px){
                     text-align: right;
                 }
             }
@@ -206,8 +209,8 @@ header{
                 margin-bottom: 20px;
             }
         .front-page-header-logo{
-            width: 615px;
-            margin: 7% 0;
+            width: 49%;
+        
             @media  screen and (max-width : 810px){
                 width: 90%;
             }
