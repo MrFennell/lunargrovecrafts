@@ -64,9 +64,6 @@ $dark-gold: #392c00;
 $light-gold: #9d7900;
 $brand-font: Amatic SC, cursive;
 
-// .icon-cart:after {
-//     content: "\e93a";
-//   }
   .icon-mail:before {
     content: "\ea83";
   }
@@ -86,32 +83,33 @@ a:hover {
 h1 {
     color: $brand-blue;
     margin: 0 auto 1.5rem auto; 
-    text-align: center;
 }
 h1, h2{
     font-family: $brand-font;
     font-weight: bold;
+    margin-bottom: 20px;
+    @media  screen and (min-width : 768px) and (max-width : 1024px){
+        margin-bottom: 20px;
+    }
+    @media screen and (min-width : 1024px){
+        margin-bottom: 40px;
+    }
 }
 
 h2.front-page {
     color: $brand-blue;
-    margin-bottom: 80px;
+    margin-bottom: 20px;
     @media  screen and (min-width : 768px) and (max-width : 1024px){
         margin-bottom: 50px;
     }
-    @media screen and (max-width: 768px){
-        margin-bottom: 20px;
+    @media screen and (min-width : 1024px){
+        margin-bottom: 80px;
     }
+
 }
 
 header{
-    margin-bottom: 80px;
-    @media  screen and (min-width : 768px) and (max-width : 1024px){
-        margin-bottom: 50px;
-    }
-    @media screen and (max-width: 768px){
-        margin-bottom: 20px;
-    }
+    
     #hero{
         width: 100%;
         background-position: center;
@@ -200,7 +198,13 @@ header{
         align-items: center;
         position: relative;
         font-size: 3rem;
-
+        margin-bottom: 80px;
+            @media  screen and (min-width : 768px) and (max-width : 1024px){
+                margin-bottom: 50px;
+            }
+            @media screen and (max-width: 768px){
+                margin-bottom: 20px;
+            }
         .front-page-header-logo{
             width: 615px;
             margin: 7% 0;
@@ -226,7 +230,7 @@ header{
 #front-page{
     #introduction{
         @media  screen and (min-width : 768px){
-            width: 615px;
+            width: 50%;
             margin-left: auto;
             margin-right: auto;
         }
@@ -234,9 +238,6 @@ header{
     }
     #promotions{
         min-height: 400px;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
         
         .swiper-container {
             width: 100%;
@@ -245,10 +246,6 @@ header{
           .swiper-slide {
             text-align: center;
             font-size: 18px;
-            /* Center slide text vertically */
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
             display: flex;
             -webkit-box-pack: center;
             -ms-flex-pack: center;
@@ -258,16 +255,26 @@ header{
             -ms-flex-align: center;
             -webkit-align-items: center;
             align-items: center;
-            min-height: 400px;
             flex-direction: column;
-            padding: 14px;
+            padding: 55px 14px;
+            min-height:50vh;
+            height: auto;
             p{
                 max-width: 80%;
+            }
+            .promotion-title{
+                position: absolute;
+                top: 25px;
+            }
+            .promotions_link_text{
+                position: absolute;
+                bottom: 25px;
             }
             img{
                 position: absolute;
                 object-fit: cover;
                 width: 100%;
+                height: 100%;
                 opacity: .1;
                 z-index: -99999;
             }
@@ -318,12 +325,12 @@ header{
     }
 }
 section{
-    margin-bottom: 80px;
+    margin-top: 80px;
     @media  screen and (min-width : 768px) and (max-width : 1024px){
-        margin-bottom: 50px;
+        margin-top: 50px;
     }
     @media screen and (max-width: 768px){
-        margin-bottom: 20px;
+        margin-top: 20px;
     }
 }
 //Pick of the Month
