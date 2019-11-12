@@ -63,7 +63,15 @@ $dark-brown: #391300;
 $dark-gold: #392c00;
 $light-gold: #9d7900;
 $brand-font: Amatic SC, cursive;
-
+@mixin header-margins{
+    margin-bottom: 80px;
+    @media  screen and (min-width : 768px) and (max-width : 1024px){
+        margin-bottom: 50px;
+    }
+    @media screen and (max-width: 768px){
+        margin-bottom: 20px;
+    }
+}
   .icon-mail:before {
     content: "\ea83";
   }
@@ -109,7 +117,7 @@ h2.front-page {
 }
 
 header{
-    
+    @include header-margins;
     #hero{
         width: 100%;
         background-position: center;
@@ -142,9 +150,7 @@ header{
                 height: 60px;
             }
         }
-        // .dropdown-menu{
-        //     margin:0;
-        // }
+
         #top-nav, #account-cart ul{
             background-color: $brand-blue;
             padding: 0;
@@ -202,13 +208,7 @@ header{
         align-items: center;
         position: relative;
         font-size: 3rem;
-        margin-bottom: 80px;
-            @media  screen and (min-width : 768px) and (max-width : 1024px){
-                margin-bottom: 50px;
-            }
-            @media screen and (max-width: 768px){
-                margin-bottom: 20px;
-            }
+        @include header-margins;
         .front-page-header-logo{
             width: 49%;
         
@@ -321,9 +321,6 @@ header{
                 @media screen and (min-width: 576px) { 
                     position: absolute;
                 }
-                
-
-                
             }
         }
     }
@@ -373,7 +370,6 @@ section{
         }
     }
 }
-//footer
 footer{
     clear: both;
     .footer-info{
