@@ -57,13 +57,25 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 $brand-blue: #001225;
+
 $light-blue:#003266;
 $dark-blue:#002348;
 $dark-brown: #391300;
 $dark-gold: #392c00;
 $light-gold: #9d7900;
+$white: #fff;
 $brand-font: Amatic SC, cursive;
+$grey: #b2b7bd;
 @mixin header-margins{
+    margin-bottom: 80px;
+    @media  screen and (min-width : 768px) and (max-width : 1024px){
+        margin-bottom: 50px;
+    }
+    @media screen and (max-width: 768px){
+        margin-bottom: 20px;
+    }
+}
+@mixin section-margins{
     margin-bottom: 80px;
     @media  screen and (min-width : 768px) and (max-width : 1024px){
         margin-bottom: 50px;
@@ -339,37 +351,179 @@ section{
     max-width: 100%;
 }
 //woocommerce
-.woocommerce-product-gallery__image{
+.woocommerce-product-gallery__image--placeholder img{
     max-width: 600px;
-    max-height: 400px;
+    height: auto;
+    @media screen and (max-width : 600px){
+        width: 100%;
+        height: auto;
+    }
+}
+.woocommerce-product-gallery__image{
+    width: 100%;
+    height: auto;
+    img{
+        max-width: 600px;
+        height: auto;
+        @media screen and (max-width : 600px){
+            width: 100%;
+            height: auto;
+        }
+    }
 }
 .flex-viewport{
     width: 600px;
+    @media  screen and (max-width : 768px){
+        width: 100%;
+        height: auto;
+    }
+   
+    
 }
 .orderby{
     margin-bottom: 1em;
 }
-.price{
-    text-align: center;
+
+//account page
+.woocommerce-MyAccount-navigation{
+    
+    ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0;
+        
+        .woocommerce-MyAccount-navigation-link{
+            border-left: 1px solid $brand-blue;
+            list-style:none;
+            a{
+                padding: .5em 1em;
+            }
+        }
+        .woocommerce-MyAccount-navigation-link:first-child{
+            border-left:0;
+            
+        }
+         is-active{
+             a{
+                color: purple
+             }
+           ;
+        }
+        
+    }
+    
 }
-.woocommerce-product-attributes{
-    margin-bottom: 1em;
-    tr{
-        vertical-align: text-top;
-        border: 1px solid #ced4da;
-    }
-    th{
-        padding: 0 20px;
-        vertical-align: middle;
-    }
-    td{
-        border: 1px solid #ced4da;
-        padding: 20px;
-        p{
-            margin: 0;
+.woocommerce-MyAccount-navigation-link is-active{
+    background-color: pink;
+}
+.summary{
+    @include section-margins;
+
+    .variations_form{
+    
+        .variations{
+            tr{
+                vertical-align: text-top;
+            }
+            th{
+                vertical-align: middle;
+                
+            }
+            td{
+                padding-right: 10px;
+            }
+            .value{
+                display: flex;
+                align-items: center;
+                .reset_variations{
+                    margin: 0 0 0 10px;
+                }
+            }
+            
+
+        }
+        .single_variation_wrap{
+            .woocommerce-variation-description p{
+                padding: 10px 0 0 0;
+            }
+            .woocommerce-variation-add-to-cart{
+                .quantity{
+                    .input-text{
+                        max-width: max-content;
+                        margin: 10px 0;
+                    }
+                    .single_add_to_cart_button{
+                        
+                    }
+                }
+            }
         }
     }
 }
+.product_meta{
+    .sku_wrapper, .posted_in{
+        display: block;
+        font-size: smaller;
+    }
+        
+}
+.woocommerce-tabs{
+    
+    @include section-margins;
+    .tabs{
+        display: flex;
+        position: relative;
+        top: 1px;
+        margin-left: 10px;
+        li{
+            
+            border-bottom: 1px solid $grey;
+            z-index: 9000;
+            a{
+                padding: 4px 6px;
+            }
+
+        }
+        .active{
+            // background-color: $brand-blue-transparent;
+            border-top: 1px solid $grey;
+            border-right: 1px solid $grey;
+            border-bottom: 1px solid $white;
+            
+            border-left: 1px solid $grey;
+            a{
+                padding: 3px 6px;
+            } 
+        }
+    }
+    .woocommerce-Tabs-panel{
+        border: 1px solid  $grey;
+        margin: 0;
+        padding: 20px;
+    }
+    
+    .woocommerce-product-attributes{
+        margin-bottom: 1em;
+        tr{
+            vertical-align: text-top;
+            border: 1px solid #ced4da;
+        }
+        th{
+            padding: 0 20px;
+            vertical-align: middle;
+        }
+        td{
+            border: 1px solid #ced4da;
+            padding: 20px;
+            p{
+                margin: 0;
+            }
+        }
+    }
+
+}
+
 footer{
     clear: both;
     .footer-info{

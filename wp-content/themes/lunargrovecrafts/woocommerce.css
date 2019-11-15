@@ -417,7 +417,7 @@ p.stars.selected a:not(.active):before {
 }
 
 .woocommerce-tabs ul.tabs li a {
-	padding: 1em 0;
+
 	display: block;
 }
 
@@ -474,18 +474,17 @@ p.no-comments {
 	content: "";
 	display: table;
 	table-layout: fixed;
-	background-color: #0f834d;
-	clear: both;
+    clear: both;
 }
 
-.woocommerce-info,
+/* .woocommerce-info,
 .woocommerce-noreviews,
 p.no-comments {
-	background-color: #3D9CD2;
-}
+	
+} */
 
 .woocommerce-error {
-	background-color: #e2401c;
+	color: #e2401c;
 }
 
 .demo_store {
@@ -495,7 +494,6 @@ p.no-comments {
 	right: 0;
 	margin: 0;
 	padding: 1em;
-	background-color: #3D9CD2;
 	z-index: 9999;
 }
 
