@@ -92,7 +92,9 @@ $grey: #b2b7bd;
     float:left;
     position: relative;
   }
-
+.post, .page {
+    margin: 0;
+}
 a{
     color: $brand-blue;
 }
@@ -223,7 +225,7 @@ header{
         @include header-margins;
         .front-page-header-logo{
             width: 49%;
-        
+            margin: 25px 0;
             @media  screen and (max-width : 810px){
                 width: 90%;
             }
@@ -285,13 +287,35 @@ header{
             .promotions_link_text{
                 position: absolute;
                 bottom: 25px;
+                display: inline-block;
+                a{
+                    font-weight: 400;
+                    text-align: center;
+                    white-space: nowrap;
+                    vertical-align: middle;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                    border: 1px solid transparent;
+                    padding: .375rem .75rem;
+                    font-size: 1rem;
+                    line-height: 1.5;
+                    border-radius: .25rem;
+                    background-color :$dark-blue;
+                    color: $white;
+                    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+                }
+                a:hover{
+                    background-color: $light-blue;
+                }
             }
             img{
                 position: absolute;
                 object-fit: cover;
                 width: 100%;
                 height: 100%;
-                opacity: .1;
+                opacity: .4;
                 z-index: -99999;
             }
           }
@@ -351,38 +375,6 @@ section{
     max-width: 100%;
 }
 //woocommerce
-.woocommerce-product-gallery__image--placeholder img{
-    max-width: 600px;
-    height: auto;
-    @media screen and (max-width : 600px){
-        width: 100%;
-        height: auto;
-    }
-}
-.woocommerce-product-gallery__image{
-    width: 100%;
-    height: auto;
-    img{
-        max-width: 600px;
-        height: auto;
-        @media screen and (max-width : 600px){
-            width: 100%;
-            height: auto;
-        }
-    }
-}
-.flex-viewport{
-    width: 600px;
-    @media  screen and (max-width : 768px){
-        width: 100%;
-        height: auto;
-    }
-   
-    
-}
-.orderby{
-    margin-bottom: 1em;
-}
 
 //account page
 .woocommerce-MyAccount-navigation{
@@ -412,7 +404,38 @@ section{
         }
         
     }
-    
+}
+
+//single product page
+.woocommerce-product-gallery__image--placeholder img{
+    max-width: 600px;
+    height: auto;
+    @media screen and (max-width : 600px){
+        width: 100%;
+        height: auto;
+    }
+}
+.woocommerce-product-gallery__image{
+    width: 100%;
+    height: auto;
+    img{
+        max-width: 600px;
+        height: auto;
+        @media screen and (max-width : 600px){
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+.flex-viewport{
+    width: 600px;
+    @media  screen and (max-width : 768px){
+        width: 100%;
+        height: auto;
+    }
+}
+.orderby{
+    margin-bottom: 1em;
 }
 .woocommerce-MyAccount-navigation-link is-active{
     background-color: pink;
@@ -425,6 +448,10 @@ section{
         .variations{
             tr{
                 vertical-align: text-top;
+                @media  screen and (max-width : 450px){
+                    display: flex;
+                    flex-direction: column;
+                }
             }
             th{
                 vertical-align: middle;
@@ -447,7 +474,6 @@ section{
             .woocommerce-variation-description p{
                 padding: 10px 0 0 0;
             }
-            .woocommerce-variation-add-to-cart{
                 .quantity{
                     .input-text{
                         max-width: max-content;
@@ -457,7 +483,12 @@ section{
                         
                     }
                 }
-            }
+        }
+       
+    }
+    .cart{  //page with only one product size
+        .qty { 
+            margin: 0 0 10px 0;
         }
     }
 }
@@ -490,7 +521,6 @@ section{
             border-top: 1px solid $grey;
             border-right: 1px solid $grey;
             border-bottom: 1px solid $white;
-            
             border-left: 1px solid $grey;
             a{
                 padding: 3px 6px;
@@ -523,30 +553,79 @@ section{
     }
 
 }
-
+//woocommerce cart page
+.woocommerce-cart-form{
+    table{
+        @media screen and (min-width: 48em){
+            width: 100%;
+        }
+    }
+   
+}
 footer{
     clear: both;
-    .footer-info{
-        display: flex;
-        float: right;
-        align-items: baseline;
-        a{
-            margin-left: .5em;
+    display: flex;
+    min-height: 20vh;
+    width: 100%;
+    @media (min-width: 576px) { 
+        padding: 100px 0;
+     }
+    .site-info{
+        width: 100%;
+        #footer-nav-menu{
+           
+                @media  screen and (min-width : 450px){
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    row-gap: 6px;
+                    column-gap: 8px;
+                    margin: auto;
+                    width: max-content;
+                    text-align: center;
+                }
+                    li{
+                        list-style: none;
+                    }
+                }
+
+            
         }
-        .icon-facebook:before {
-        content: "\ea90";
-        font-size: 20px;
-      }
-      .icon-instagram:before {
-        content: "\ea92";
-        font-size: 20px;
-      }
-      .icon-twitter:before {
-        content: "\ea96";
-        font-size: 20px;
-      }
-      
-    }
-
-
+        #footer-media{
+            display: flex;
+            justify-content: center;
+            #footer-media-content{
+                display: flex;
+                flex-flow: column nowrap;
+                
+                #footer-media-content-icons{
+                    
+                    display: flex;
+                    justify-content: space-between;
+                    a{
+                        margin-left: .5em;
+                    }
+                    .icon-facebook:before {
+                    content: "\ea90";
+                        font-size: 20px;
+                    }
+                    .icon-instagram:before {
+                        content: "\ea92";
+                        font-size: 20px;
+                    }
+                    .icon-twitter:before {
+                        content: "\ea96";
+                        font-size: 20px;
+                    }
+                }
+                p{
+                    position: relative;
+                    top: 8px;
+                }
+            }
+            
+            
+            
+        }
 }
+
+

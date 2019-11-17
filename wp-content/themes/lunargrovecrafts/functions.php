@@ -45,8 +45,8 @@ if ( ! function_exists( 'lunargrovecrafts_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
             'top-nav' => esc_html__( 'HomeProducts', 'lunargrovecrafts' ),
-            'account-cart'=> esc_html__( 'AccountCart', 'lunargrovecrafts' )
-            
+            'account-cart'=> esc_html__( 'AccountCart', 'lunargrovecrafts' ),
+            'footer-nav'=> esc_html__( 'FooterNav', 'lunargrovecrafts' )
 		) );
 
 		/*

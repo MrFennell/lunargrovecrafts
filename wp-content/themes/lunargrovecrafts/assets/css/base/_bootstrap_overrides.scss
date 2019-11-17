@@ -8,3 +8,24 @@
     color: #001225;
     border-color: #001225;
 }
+$blue: #001225;
+$light-blue:#003266;
+
+$theme-colors: ( "primary":#001225);
+$primary: $blue;
+
+.btn, button, input[type="button"], input[type="submit"] {
+    background-color: $blue;
+    border-color: $blue;
+}
+// .btn-primary.disabled, button.disabled, input.disabled[type="button"], input.disabled[type="reset"], input.disabled[type="submit"], .btn-primary:disabled, button:disabled, input:disabled[type="button"], input:disabled[type="reset"], input:disabled[type="submit"] {
+//     color: #fff;
+//     background-color: $light-blue;
+//     border-color: $light-blue;
+// }
+
+.btn-primary:hover, button:hover, input:hover[type="button"], 
+input:hover[type="reset"], input:hover[type="submit"] {
+    background-color: $light-blue;
+    border-color: $light-blue;
+}
