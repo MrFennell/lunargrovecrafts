@@ -29,7 +29,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import './base/swiper';
 
 @font-face {
-
     font-family: 'icomoon';
     src:  url('./assets/css/fonts/fontsfonts/icomoon.eot?gj9yuh');
     src:  url('./assets/css/fonts/icomoon.eot?gj9yuh#iefix') format('embedded-opentype'),
@@ -39,7 +38,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     font-weight: normal;
     font-style: normal;
     font-display: block;
-
   }
   
   [class^="icon-"], [class*=" icon-"] {
@@ -57,7 +55,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 $brand-blue: #001225;
-
 $light-blue:#003266;
 $dark-blue:#002348;
 $dark-brown: #391300;
@@ -243,7 +240,6 @@ header{
             font-size: 18px;
         }
     }
-    
 }
 #front-page{
     #introduction{
@@ -374,17 +370,26 @@ section{
 #pick-of-the-month-img{
     max-width: 100%;
 }
-//woocommerce
 
-//account page
+//woocommerce account pages
+
 .woocommerce-MyAccount-navigation{
-    
+    @include section-margins;
+    .is-active{
+        background-color: $brand-blue;
+        a{
+            color: $white;
+        }
+    }
     ul{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         padding: 0;
-        
+
+        @media screen and (max-width: 768px){
+            flex-direction: column;
+        }
         .woocommerce-MyAccount-navigation-link{
             border-left: 1px solid $brand-blue;
             list-style:none;
@@ -393,7 +398,10 @@ section{
             }
         }
         .woocommerce-MyAccount-navigation-link:first-child{
-            border-left:0;
+            @media screen and (min-width: 768px){
+                border-left:0;
+            }
+            
             
         }
          is-active{
@@ -553,6 +561,7 @@ section{
     }
 
 }
+
 //woocommerce cart page
 .woocommerce-cart-form{
     table{

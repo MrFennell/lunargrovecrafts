@@ -1097,7 +1097,7 @@ a.close.disabled{pointer-events:none}
 .rounded-left{border-bottom-left-radius:.25rem !important;border-top-left-radius:.25rem !important}
 .visible{visibility:visible !important}
 .invisible{visibility:hidden !important}
-.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12,.col,.col-auto,.col-sm-1,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm,.col-sm-auto,.col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-md-12,.col-md,.col-md-auto,.col-lg-1,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg,.col-lg-auto,.col-xl-1,.col-xl-2,.col-xl-3,.col-xl-4,.col-xl-5,.col-xl-6,.col-xl-7,.col-xl-8,.col-xl-9,.col-xl-10,.col-xl-11,.col-xl-12,.col-xl,.col-xl-auto{padding:0}
+.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12,.col,.col-auto,.col-sm-1,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm,.col-sm-auto,.col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-md-12,.col-md,.col-md-auto,.col-lg-1,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg,.col-lg-auto,.col-xl-1,.col-xl-2,.col-xl-3,.col-xl-4,.col-xl-5,.col-xl-6,.col-xl-7,.col-xl-8,.col-xl-9,.col-xl-10,.col-xl-11,.col-xl-12,.col-xl,.col-xl-auto{padding:0;max-width:100%}
 .bg-dark{background-color:#001225 !important}
 .btn-outline-success{color:#001225;border-color:#001225}
 .btn,button,input[type="button"],input[type="reset"],input[type="submit"],button,input[type="button"],input[type="submit"]{background-color:#001225;border-color:#001225}
@@ -1274,10 +1274,12 @@ header #front-page-header-content .header-subtitle{margin:10px 0 0 0;color:#fff;
 #front-page #front-page-categories .category-image-container img{-o-object-fit:cover;object-fit:cover;width:100%;height:100%}
 section{margin-top:80px}
 #pick-of-the-month-img{max-width:100%}
+.woocommerce-MyAccount-navigation{margin-bottom:80px}
+.woocommerce-MyAccount-navigation .is-active{background-color:#001225}
+.woocommerce-MyAccount-navigation .is-active a{color:#fff}
 .woocommerce-MyAccount-navigation ul{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;padding:0}
 .woocommerce-MyAccount-navigation ul .woocommerce-MyAccount-navigation-link{border-left:1px solid #001225;list-style:none}
 .woocommerce-MyAccount-navigation ul .woocommerce-MyAccount-navigation-link a{padding:.5em 1em}
-.woocommerce-MyAccount-navigation ul .woocommerce-MyAccount-navigation-link:first-child{border-left:0}
 .woocommerce-MyAccount-navigation ul is-active a{color:purple}
 .woocommerce-product-gallery__image--placeholder img{max-width:600px;height:auto}
 .woocommerce-product-gallery__image{width:100%;height:auto}
@@ -1825,10 +1827,12 @@ h2.front-page,.front-page.h2{margin-bottom:50px}
 header{margin-bottom:50px}
 header #front-page-header-content{margin-bottom:50px}
 section{margin-top:50px}
+.woocommerce-MyAccount-navigation{margin-bottom:50px}
 .summary{margin-bottom:50px}
 .woocommerce-tabs{margin-bottom:50px}
 }@media screen and (min-width:768px){#front-page #introduction{width:50%;margin-left:auto;margin-right:auto}
 #front-page #front-page-categories .categories .category-copy{padding:190px 128px}
+.woocommerce-MyAccount-navigation ul .woocommerce-MyAccount-navigation-link:first-child{border-left:0}
 }@media(min-width:992px){.container{max-width:960px}
 .container,.container-sm,.container-md,.container-lg{max-width:960px}
 .col-lg{-ms-flex-preferred-size:0;flex-basis:0;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;max-width:100%}
@@ -2310,6 +2314,8 @@ h2.front-page,.front-page.h2{margin-bottom:80px}
 header nav #top-nav .dropdown-item,header nav #account-cart li .dropdown-item{text-align:right}
 header #front-page-header-content{margin-bottom:20px}
 section{margin-top:20px}
+.woocommerce-MyAccount-navigation{margin-bottom:20px}
+.woocommerce-MyAccount-navigation ul{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
 .flex-viewport{width:100%;height:auto}
 .summary{margin-bottom:20px}
 .woocommerce-tabs{margin-bottom:20px}
