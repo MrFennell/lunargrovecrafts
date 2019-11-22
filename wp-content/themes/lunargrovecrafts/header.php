@@ -61,8 +61,8 @@
                     ?>
                     <div id="navbarNav" class="collapse navbar-collapse">
                         <ul id="account-cart" class="navbar-nav ml-auto">
-                            <li><a title="My Account" href="my-account/" class="nav-link">My Account</a></li>
-                            <li><a title="Cart" href="cart/" class="nav-link" aria-current="page"><span class="icon-cart"><span class="text-hide">Cart</span></span></a></li>
+                            <li><a title="My Account" href="<?php echo get_home_url(); ?>/my-account" class="nav-link">My Account</a></li>
+                            <li><a title="Cart" href="<?php echo get_home_url(); ?>/cart" class="nav-link" aria-current="page"><span class="icon-cart"><span class="text-hide">Cart</span></span></a></li>
                         </ul>
                     </div>
                 </nav>
