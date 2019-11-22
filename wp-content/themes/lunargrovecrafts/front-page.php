@@ -11,7 +11,6 @@
             <?php endif; ?>
         </section>
         <?php if(have_rows('promotions')):
-            
             $promotions_link_text = get_field('promotions_link_text');?>
         <section id="promotions">
             <div class="swiper-container">
@@ -55,6 +54,9 @@
             </div>
         </section>
         <?php endif;?>
+        <section id="front-page-contact" class="container-fluid">
+            <?php echo do_shortcode( '[contact-form-7 id="30" title="Get in Touch"]' ); ?>
+        </section>
         <section id="front-page-categories">
             <?php 
             $counter = 0;

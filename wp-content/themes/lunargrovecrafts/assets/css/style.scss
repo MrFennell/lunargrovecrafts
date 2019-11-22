@@ -81,14 +81,15 @@ $grey: #b2b7bd;
         margin-bottom: 20px;
     }
 }
-  .icon-mail:before {
-    content: "\ea83";
-  }
+
   .icon-cart:before {
     content: "\e93a";
-    float:left;
-    position: relative;
   }
+  .text-hide{
+      position: absolute;
+      right: 10000px;
+  }
+
 .post, .page {
     margin: 0;
 }
@@ -136,21 +137,7 @@ header{
         background-repeat: no-repeat;
         position: relative;
     }
-    .inner-page-header{
-        width: 100%;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        position: relative;
-        .header-text{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: relative;
-            font-size: 3rem;
-            color: #fff;
-        }
-    }
+
     nav{
         z-index: 99999;
         opacity: 0.9;
@@ -226,7 +213,6 @@ header{
             @media  screen and (max-width : 810px){
                 width: 90%;
             }
-           
         }
         h1{
             margin:0;
@@ -316,6 +302,16 @@ header{
             }
           }
     }
+    #front-page-contact{
+        @media  screen and (min-width : 768px){
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        label{
+            display: block;
+        }
+    }
     #front-page-categories {
         .categories{
             .category-copy-container{
@@ -395,6 +391,7 @@ section{
             list-style:none;
             a{
                 padding: .5em 1em;
+                
             }
         }
         .woocommerce-MyAccount-navigation-link:first-child{
@@ -581,8 +578,48 @@ footer{
      }
     .site-info{
         width: 100%;
-        #footer-nav-menu{
-           
+            #footer-contact{
+                form{
+
+                    @media  screen and (min-width : 450px){
+                        width: 400px;
+                        margin: auto;
+                }
+                
+                }
+            }
+            #footer-media{
+                display: flex;
+                justify-content: center;
+                #footer-media-content{
+                    display: flex;
+                    flex-flow: column nowrap;
+                    #footer-media-content-icons{
+                        display: flex;
+                        justify-content: space-between;
+                        a{
+                            margin-left: .5em;
+                        }
+                        .icon-facebook:before {
+                        content: "\ea90";
+                            font-size: 20px;
+                        }
+                        .icon-instagram:before {
+                            content: "\ea92";
+                            font-size: 20px;
+                        }
+                        .icon-twitter:before {
+                            content: "\ea96";
+                            font-size: 20px;
+                        }
+                    }
+                    p{
+                        position: relative;
+                        top: 8px;
+                    }
+                }
+            }
+            #footer-nav-menu{
                 @media  screen and (min-width : 450px){
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
@@ -596,44 +633,6 @@ footer{
                         list-style: none;
                     }
                 }
-
-            
-        }
-        #footer-media{
-            display: flex;
-            justify-content: center;
-            #footer-media-content{
-                display: flex;
-                flex-flow: column nowrap;
-                
-                #footer-media-content-icons{
-                    
-                    display: flex;
-                    justify-content: space-between;
-                    a{
-                        margin-left: .5em;
-                    }
-                    .icon-facebook:before {
-                    content: "\ea90";
-                        font-size: 20px;
-                    }
-                    .icon-instagram:before {
-                        content: "\ea92";
-                        font-size: 20px;
-                    }
-                    .icon-twitter:before {
-                        content: "\ea96";
-                        font-size: 20px;
-                    }
-                }
-                p{
-                    position: relative;
-                    top: 8px;
-                }
-            }
-            
-            
-            
         }
 }
 

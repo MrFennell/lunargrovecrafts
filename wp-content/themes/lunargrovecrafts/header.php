@@ -26,19 +26,18 @@
 
 	<header id="masthead" class="site-header">
 		
-		<?php if ( is_front_page() ) : ?>
+		
 			<div id="hero"><!-- header for front page-->
-				<?php 
-					if( has_post_thumbnail() ):
-					$post = get_post();
-					$size = 'large';					
-						?> <!-- #set hero image -->
-					<style type="text/css">
-						#hero {
-							background-image: url("<?php echo esc_url(get_the_post_thumbnail_url($post, $size )); ?>");
-						}
-					</style>
-				<?php endif; ?>
+                <?php if( has_post_thumbnail() && is_front_page() ):
+                    $post = get_post();
+                    $size = 'large';					
+                    ?> <!-- #set hero image in background -->
+                    <style type="text/css">
+                        #hero {
+                            background-image: url("<?php echo esc_url(get_the_post_thumbnail_url($post, $size )); ?>");
+                        }
+                    </style>
+                <?php endif; ?>
 				<nav id="site-navigation" class="navbar navbar-dark navbar-expand-md bg-dark"><!-- #site-navigation -->
                     <?php $logo = get_custom_logo();
                     if ($logo):
@@ -48,36 +47,29 @@
 						<span class="navbar-toggler-icon"></span>
 					</button>
 					<?php
-                            wp_nav_menu( array(
-                                'theme_location' => 'menu-1',
-                                'menu_id'        => 'top-nav',
-                                'depth'           => 2,
-                                'container'       => 'div',
-                                'container_class' => 'collapse navbar-collapse',
-                                'container_id'    => 'navbarNav',
-                                'menu_class'      => 'navbar-nav mr-auto',
-                                'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-                                'walker'          => new WP_Bootstrap_Navwalker(),
-                            ) );
-                        ?>
-                        <?php
-                            wp_nav_menu( array(
-                                'theme_location' => 'account-cart',
-                                'menu_id'        => 'account-cart',
-                                'depth'           => 2,
-                                'container'       => 'div',
-                                'container_class' => 'collapse navbar-collapse',
-                                'container_id'    => 'navbarNav',
-                                'menu_class'      => 'navbar-nav ml-auto',
-                                'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-                                'walker'          => new WP_Bootstrap_Navwalker(),
-                            ) );
-                        ?>
-				</nav>
-				<div id="front-page-header-content">
+                        wp_nav_menu( array(
+                            'theme_location' => 'menu-1',
+                            'menu_id'        => 'top-nav',
+                            'depth'           => 2,
+                            'container'       => 'div',
+                            'container_class' => 'collapse navbar-collapse',
+                            'container_id'    => 'navbarNav',
+                            'menu_class'      => 'navbar-nav mr-auto',
+                            'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+                            'walker'          => new WP_Bootstrap_Navwalker(),
+                        ) );
+                    ?>
+                    <div id="navbarNav" class="collapse navbar-collapse">
+                        <ul id="account-cart" class="navbar-nav ml-auto">
+                            <li><a title="My Account" href="my-account/" class="nav-link">My Account</a></li>
+                            <li><a title="Cart" href="cart/" class="nav-link" aria-current="page"><span class="icon-cart"><span class="text-hide">Cart</span></span></a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <?php if ( is_front_page() ) : ?> 
+				<div id="front-page-header-content"> <!-- front page header logos -->
 					<?php
-	
-						$image = get_field('header_logo');
+                        $image = get_field('header_logo');
 						if( !empty( $image ) ): ?>
 							<img class="front-page-header-logo" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
 					<?php endif;
@@ -87,52 +79,16 @@
 						<h1 class="header-title"><?php echo $header_title ?></h1>
 					<?php endif; ?>
 					<?php 
-						$header_subtitle = get_field('header_subtitle'); 
-						if( !empty( $header_subtitle ) ): ?>
-						<h2 class="header-subtitle"><?php the_field('header_subtitle');?></h2>
-						
-						<?php endif;?>
-				</div>
+                        $header_subtitle = get_field('header_subtitle'); 
+                        if( !empty( $header_subtitle ) ): ?>
+                        <h2 class="header-subtitle"><?php the_field('header_subtitle');?></h2>
+                        
+                    <?php endif;?>
+                </div>
+                <?php endif;?>
 			</div>
-			<?php else:?><!--  Header styles for product and non-front pages. -->
-				<div class="inner-page-header">
-					<nav id="site-navigation" class="navbar navbar-dark navbar-expand-md bg-dark"><!-- #site-navigation -->
-						<?php $logo = get_custom_logo();
-							if ($logo):
-								echo get_custom_logo();
-							endif;?>
-						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-							<span class="navbar-toggler-icon"></span>
-						</button>
-						<?php
-                            wp_nav_menu( array(
-                                'theme_location' => 'menu-1',
-                                'menu_id'        => 'top-nav',
-                                'depth'           => 2,
-                                'container'       => 'div',
-                                'container_class' => 'collapse navbar-collapse',
-                                'container_id'    => 'navbarNav',
-                                'menu_class'      => 'navbar-nav mr-auto',
-                                'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-                                'walker'          => new WP_Bootstrap_Navwalker(),
-                            ) );
-                        ?>
-                        <?php
-                            wp_nav_menu( array(
-                                'theme_location' => 'account-cart',
-                                'menu_id'        => 'account-cart',
-                                'depth'           => 2,
-                                'container'       => 'div',
-                                'container_class' => 'collapse navbar-collapse',
-                                'container_id'    => 'navbarNav',
-                                'menu_class'      => 'navbar-nav ml-auto',
-                                'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-                                'walker'          => new WP_Bootstrap_Navwalker(),
-                            ) );
-                        ?>
-					</nav>
-			</div>
-		<?php endif;?>
+				
+		
 		
 	</header><!-- #masthead -->
 
