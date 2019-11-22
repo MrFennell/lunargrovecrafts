@@ -185,7 +185,7 @@ header{
             .dropdown-item{ //bootstrap sub-menu
                 padding: 11px 20px 13px 19px;
                 margin: 0;
-                @media screen and (max-width: 768px){
+                @media screen and (max-width: 850px){
                     text-align: right;
                 }
             }
@@ -196,9 +196,19 @@ header{
         #top-nav li{
             margin-left: 22px;
         }
-        #account-cart li{
-            margin-left: 22px;
+        #account-cart{
+            margin-right: 14px;
+            #cart-container{
+                position: relative;
+                .cart-contents-count{
+                    
+                }
+            }
+            li{
+                margin-left: 22px;
+            }
         }
+       
     }
     #front-page-header-content{
         display: flex;
@@ -210,7 +220,7 @@ header{
         .front-page-header-logo{
             width: 49%;
             margin: 25px 0;
-            @media  screen and (max-width : 810px){
+            @media  screen and (max-width : 850px){
                 width: 90%;
             }
         }
