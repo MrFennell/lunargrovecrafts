@@ -1311,8 +1311,9 @@ section{margin-top:80px}
 .woocommerce-tabs .woocommerce-product-attributes td{border:1px solid #ced4da;padding:20px}
 .woocommerce-tabs .woocommerce-product-attributes td p{margin:0}
 footer{clear:both;display:-webkit-box;display:-ms-flexbox;display:flex;min-height:20vh;width:100%}
-footer .site-info{width:100%}
-footer .site-info #footer-media{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
+footer .site-info{width:100%;margin:auto}
+footer .site-info #footer-contact form label{display:block}
+footer .site-info #footer-media{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;height:86px}
 footer .site-info #footer-media #footer-media-content{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-flow:column nowrap;flex-flow:column nowrap}
 footer .site-info #footer-media #footer-media-content #footer-media-content-icons{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 footer .site-info #footer-media #footer-media-content #footer-media-content-icons a{margin-left:.5em}

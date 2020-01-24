@@ -588,19 +588,22 @@ footer{
      }
     .site-info{
         width: 100%;
+        margin: auto;
             #footer-contact{
                 form{
-
-                    @media  screen and (min-width : 450px){
-                        width: 400px;
-                        margin: auto;
-                }
-                
+                    label{
+                        display: block;
+                    }
+                        @media  screen and (min-width : 450px){
+                            width: 400px;
+                            margin: auto;
+                    }
                 }
             }
             #footer-media{
                 display: flex;
                 justify-content: center;
+                height: 86px;
                 #footer-media-content{
                     display: flex;
                     flex-flow: column nowrap;
