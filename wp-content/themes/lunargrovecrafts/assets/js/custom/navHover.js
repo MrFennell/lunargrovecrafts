@@ -6,7 +6,7 @@
         function checkWidth(){
             const windowsize = $window.width();
             return (windowsize > screenWidth) ? true : false;
-            }
+        }
         // checkWidth();
         $('.dropdown').mouseover(function() {
             if(checkWidth()===true){
@@ -14,13 +14,13 @@
             }
         });
         $('.dropdown-menu').mouseout(function() {
-            var isHovered = $('.dropdown').is(":hover");
+            let isHovered = $('.dropdown').is(":hover");
             if ((!isHovered) && (checkWidth()===true)){
                 $('.dropdown-menu').removeClass('show');
             }
         });
         $('.dropdown').mouseout(function() {
-            var isHovered = $('.dropdown-menu').is(":hover");
+            let isHovered = $('.dropdown-menu').is(":hover");
             if ((!isHovered) && (checkWidth()===true)){
                 $('.dropdown-menu').removeClass('show');
             }

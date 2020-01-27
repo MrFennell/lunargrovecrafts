@@ -185,7 +185,7 @@ header{
             .dropdown-item{ //bootstrap sub-menu
                 padding: 11px 20px 13px 19px;
                 margin: 0;
-                @media screen and (max-width: 850px){
+                @media screen and (max-width: 992px){
                     text-align: right;
                 }
             }
@@ -197,7 +197,6 @@ header{
             margin-left: 22px;
         }
         #account-cart{
-            margin-right: 14px;
             #cart-container{
                 position: relative;
                 .cart-contents-count{
