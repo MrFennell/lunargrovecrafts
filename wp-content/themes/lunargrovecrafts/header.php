@@ -15,8 +15,8 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=optional" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
 
@@ -36,11 +36,20 @@
                         }
                     </style>
                 <?php endif; ?>
+                
 				<nav id="site-navigation" class="navbar navbar-dark navbar-expand-lg bg-dark"><!-- #site-navigation -->
                     <?php $logo = get_custom_logo();
-                    if ($logo):
-                        echo get_custom_logo();
-                    endif;?>
+                        if ($logo):
+                            echo get_custom_logo();
+                        endif;?>
+                    <div id="cart-container-hamburger" class="d-lg-none pull-right">
+                        <?php echo do_shortcode("[woo_cart_but]"); ?>
+                        <a title="Cart" href="<?php echo get_home_url(); ?>/cart" class="nav-link" aria-current="page">
+                            <span class="icon-cart">
+                                <span class="text-hide">Cart</span>
+                            </span>
+                        </a>
+                    </div>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
@@ -57,15 +66,14 @@
                             'walker'          => new WP_Bootstrap_Navwalker(),
                         ) );
                     ?>
-                    <div id="navbarNav" class="collapse navbar-collapse">
+                    
+                    <div class="collapse navbar-collapse">
                         <ul id="account-cart" class="navbar-nav ml-auto">
                             <li><a title="My Account" href="<?php echo get_home_url(); ?>/my-account" class="nav-link">My Account</a></li>
                             <li>
                                 <div id="cart-container">
-                                <?php echo do_shortcode("[woo_cart_but]"); ?>
+                                    <?php echo do_shortcode("[woo_cart_but]"); ?>
                                     <a title="Cart" href="<?php echo get_home_url(); ?>/cart" class="nav-link" aria-current="page">
-                                    
-
                                         <span class="icon-cart">
                                         
                                             <span class="text-hide">Cart</span>

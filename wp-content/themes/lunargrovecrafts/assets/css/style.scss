@@ -43,7 +43,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   [class^="icon-"], [class*=" icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'icomoon' !important;
-    speak: none;
+    // speak: none;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
@@ -61,7 +61,8 @@ $dark-brown: #391300;
 $dark-gold: #392c00;
 $light-gold: #9d7900;
 $white: #fff;
-$brand-font: Amatic SC, cursive;
+
+$brand-font: 'Amatic SC', cursive;
 $grey: #b2b7bd;
 @mixin header-margins{
     margin-bottom: 80px;
@@ -137,78 +138,113 @@ header{
         background-repeat: no-repeat;
         position: relative;
     }
-
-    nav{
-        z-index: 99999;
-        opacity: 0.9;
-        .custom-logo-link img{
-            height: 85px;
-            padding: 4px;
-            @media screen and (max-width: 450px){
-                height: 60px;
-            }
-        }
-
-        #top-nav, #account-cart ul{
-            background-color: $brand-blue;
-            padding: 0;
-            margin: 0;
-        }
-        #top-nav, #account-cart li {
-            font-size: 1rem;
-            font-weight: 400;
-            line-height: 1.5;
-            background-color: $brand-blue;
-            font-family: $brand-font;
-            font-size: 2rem;
-            white-space: nowrap;
-            
-            a:hover{
-                color: $light-gold;
-                background-color: $brand-blue;
-            }
-            a{
-                color: #fff;
-                float: right;
-                font-weight: 400;
-                background-color: $brand-blue;
-                line-height: 1.5;
-                list-style: none;
-                
-            }
-            ul.dropdown-menu {
-                font-size: 2rem;
-                padding: 0;
-                border: 0;
-                margin: 0;
-            }
-            .dropdown-item{ //bootstrap sub-menu
-                padding: 11px 20px 13px 19px;
-                margin: 0;
-                @media screen and (max-width: 992px){
-                    text-align: right;
+    // .site-navigation-container{
+        // display: flex;
+        // align-items: baseline;
+        nav{
+            // flex-grow: 2;
+            z-index: 99999;
+            opacity: 0.9;
+            .custom-logo-link img{
+                height: 85px;
+                padding: 4px;
+                @media screen and (max-width: 500px){
+                    height: 60px;
                 }
             }
-            ul li{
-                margin-left: 0;
+
+            #top-nav, #account-cart ul{
+                background-color: $brand-blue;
+                padding: 0;
+                margin: 0;
             }
-        }
-        #top-nav li{
-            margin-left: 22px;
-        }
-        #account-cart{
-            #cart-container{
-                position: relative;
-                .cart-contents-count{
+            #top-nav, #account-cart li {
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.5;
+                background-color: $brand-blue;
+                font-family: $brand-font;
+                font-size: 2rem;
+                white-space: nowrap;
+                
+                a:hover{
+                    color: $light-gold;
+                    background-color: $brand-blue;
+                }
+                a{
+                    color: #fff;
+                    float: right;
+                    font-weight: 400;
+                    background-color: $brand-blue;
+                    line-height: 1.5;
+                    list-style: none;
                     
                 }
+                ul.dropdown-menu {
+                    font-size: 2rem;
+                    padding: 0;
+                    border: 0;
+                    margin: 0;
+                }
+                .dropdown-item{ //bootstrap sub-menu
+                    padding: 11px 20px 13px 19px;
+                    margin: 0;
+                    @media screen and (max-width: 992px){
+                        text-align: right;
+                    }
+                }
+                ul li{
+                    margin-left: 0;
+                }
             }
-            li{
+            #top-nav li{
                 margin-left: 22px;
             }
+                #cart-container{
+                    position: relative;
+                    
+                    .cart-contents-count{
+                        
+                    }
+                }
+                li{
+                    margin-left: 22px;
+                }
+            
+        
         }
-       
-    }
+
+        #cart-container-hamburger{
+            flex-grow: 2;
+            margin-right: 22px;
+            font-family: $brand-font;
+            font-size: 2rem;
+            position: relative;
+                a:hover{
+                    color: $light-gold;
+                    background-color: $brand-blue;
+                }
+                a{
+                    color: #fff;
+                    float: right;
+                    font-weight: 400;
+                    background-color: $brand-blue;
+                    line-height: 1.5;
+                    list-style: none;
+                    
+                    padding: 0;
+                }
+                .cart-contents-count{
+                    font-size: 1rem;
+                    position: absolute;
+                    top: -3px;
+                    right: -11px;
+
+                }
+            
+        }
+
+    // }
     #front-page-header-content{
         display: flex;
         flex-direction: column;
@@ -582,10 +618,13 @@ footer{
     display: flex;
     min-height: 20vh;
     width: 100%;
+    background-color: $brand-blue;
     @media (min-width: 576px) { 
         padding: 100px 0;
      }
+     
     .site-info{
+        color: $white;
         width: 100%;
         margin: auto;
             #footer-contact{
@@ -603,6 +642,7 @@ footer{
                 display: flex;
                 justify-content: center;
                 height: 86px;
+               
                 #footer-media-content{
                     display: flex;
                     flex-flow: column nowrap;
@@ -611,6 +651,10 @@ footer{
                         justify-content: space-between;
                         a{
                             margin-left: .5em;
+                            color: $white;
+                        }
+                        a:hover{
+                            color: $light-gold;
                         }
                         .icon-facebook:before {
                         content: "\ea90";
@@ -643,9 +687,17 @@ footer{
                 }
                     li{
                         list-style: none;
+                        a {
+                            color: $white;
+                        }
+                        a:hover{
+                            color: $light-gold;
+                        }
                     }
                 }
         }
 }
-
+.entry-footer{
+    background-color: $white;
+}
 

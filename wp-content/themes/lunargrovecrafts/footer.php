@@ -15,9 +15,11 @@
 
 	<footer id="colophon" class="site-footer container-fluid">
 		<div class="site-info row">
-            <div id="footer-contact" class="col-sm"> 
-                <?php echo do_shortcode( '[contact-form-7 id="30" title="Get in Touch"]' ); ?>
-            </div>
+            <!-- <div id="footer-contact" class="col-sm"> 
+                <?php 
+                    // echo do_shortcode( '[contact-form-7 id="30" title="Get in Touch"]' ); 
+                ?>
+            </div> -->
 			<div id="footer-media-container" class="col-sm">
                 <div id="footer-media">
                     <div id="footer-media-content" >
