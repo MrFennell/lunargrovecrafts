@@ -62,7 +62,7 @@ $dark-gold: #392c00;
 $light-gold: #9d7900;
 $white: #fff;
 
-$brand-font: 'Amatic SC', cursive;
+$brand-font: 'Amatic SC', cursive, serif;
 $grey: #b2b7bd;
 @mixin header-margins{
     margin-bottom: 80px;
@@ -604,21 +604,42 @@ section{
 
 }
 
-//woocommerce cart page
+//woocommerce cart checkout page
 .woocommerce-cart-form{
     table{
         @media screen and (min-width: 48em){
             width: 100%;
         }
     }
-   
+    .coupon {
+        margin-top: 22px;
+        .button{
+            float:left;
+
+        }
+    }
+    .button[name="apply_coupon"]{
+        margin: 10px 10px 10px 0;
+    }
+    .button[name="update_cart"]{
+        margin: 10px 10px 10px 0;
+    }
 }
+.cart-collaterals{
+    padding: 22px 0 44px 0; 
+    .wc-proceed-to-checkout{
+        padding:  22px 0 0 0;
+    }
+}
+
+//footer
 footer{
     clear: both;
     display: flex;
     min-height: 20vh;
     width: 100%;
     background-color: $brand-blue;
+    padding: 50px 0;
     @media (min-width: 576px) { 
         padding: 100px 0;
      }
@@ -627,16 +648,32 @@ footer{
         color: $white;
         width: 100%;
         margin: auto;
-            #footer-contact{
-                form{
-                    label{
-                        display: block;
-                    }
-                        @media  screen and (min-width : 450px){
-                            width: 400px;
-                            margin: auto;
-                    }
+            
+            #footer-nav-menu{
+                @media  screen and (min-width : 576px){
+                    display: flex;
+                    margin: auto;
+                    width: 100%;
+                    justify-content: space-around;
+                    padding: 0 0 38px 0;
+                    
                 }
+                padding: 0 0 22px 0;
+                text-align: center;
+                    li{
+                        list-style: none;
+                        
+                        a {
+                            color: $white;
+                            border-bottom: 1px solid $white;
+                            padding-bottom: 2px;
+                        }
+                        a:hover{
+                            color: $light-gold;
+                            border-bottom: 1px solid $light-gold;
+                        }
+                    }
+                    
             }
             #footer-media{
                 display: flex;
@@ -646,9 +683,11 @@ footer{
                 #footer-media-content{
                     display: flex;
                     flex-flow: column nowrap;
+                    
                     #footer-media-content-icons{
                         display: flex;
                         justify-content: space-between;
+                        padding: 0 0 22px 0;
                         a{
                             margin-left: .5em;
                             color: $white;
@@ -675,26 +714,7 @@ footer{
                     }
                 }
             }
-            #footer-nav-menu{
-                @media  screen and (min-width : 450px){
-                    display: grid;
-                    grid-template-columns: repeat(2, 1fr);
-                    row-gap: 6px;
-                    column-gap: 8px;
-                    margin: auto;
-                    width: max-content;
-                    text-align: center;
-                }
-                    li{
-                        list-style: none;
-                        a {
-                            color: $white;
-                        }
-                        a:hover{
-                            color: $light-gold;
-                        }
-                    }
-                }
+            
         }
 }
 .entry-footer{

@@ -1238,14 +1238,14 @@ button.swiper-pagination-bullet{border:0;margin:0;padding:0;-webkit-box-shadow:n
 a{color:#001225}
 a:hover{color:#9d7900;text-decoration:none}
 h1,.h1{color:#001225;margin:0 auto 1.5rem auto}
-h1,.h1,h2,.h2{font-family:"Amatic SC",cursive;font-weight:bold;margin-bottom:20px}
+h1,.h1,h2,.h2{font-family:"Amatic SC",cursive,serif;font-weight:bold;margin-bottom:20px}
 h2.front-page,.front-page.h2{color:#001225;margin-bottom:20px}
 header{margin-bottom:80px}
 header #hero{width:100%;background-position:center;background-size:cover;background-repeat:no-repeat;position:relative}
 header nav{z-index:99999;opacity:.9}
 header nav .custom-logo-link img{height:85px;padding:4px}
 header nav #top-nav,header nav #account-cart ul{background-color:#001225;padding:0;margin:0}
-header nav #top-nav,header nav #account-cart li{font-size:1rem;font-weight:400;line-height:1.5;background-color:#001225;font-family:"Amatic SC",cursive;font-size:2rem;white-space:nowrap}
+header nav #top-nav,header nav #account-cart li{font-size:1rem;font-weight:400;line-height:1.5;background-color:#001225;font-family:"Amatic SC",cursive,serif;font-size:2rem;white-space:nowrap}
 header nav #top-nav a:hover,header nav #account-cart li a:hover{color:#9d7900;background-color:#001225}
 header nav #top-nav a,header nav #account-cart li a{color:#fff;float:right;font-weight:400;background-color:#001225;line-height:1.5;list-style:none}
 header nav #top-nav ul.dropdown-menu,header nav #account-cart li ul.dropdown-menu{font-size:2rem;padding:0;border:0;margin:0}
@@ -1254,7 +1254,7 @@ header nav #top-nav ul li,header nav #account-cart li ul li{margin-left:0}
 header nav #top-nav li{margin-left:22px}
 header nav #cart-container{position:relative}
 header nav li{margin-left:22px}
-header #cart-container-hamburger{-webkit-box-flex:2;-ms-flex-positive:2;flex-grow:2;margin-right:22px;font-family:"Amatic SC",cursive;font-size:2rem;position:relative}
+header #cart-container-hamburger{-webkit-box-flex:2;-ms-flex-positive:2;flex-grow:2;margin-right:22px;font-family:"Amatic SC",cursive,serif;font-size:2rem;position:relative}
 header #cart-container-hamburger a:hover{color:#9d7900;background-color:#001225}
 header #cart-container-hamburger a{color:#fff;float:right;font-weight:400;background-color:#001225;line-height:1.5;list-style:none;padding:0}
 header #cart-container-hamburger .cart-contents-count{font-size:1rem;position:absolute;top:-3px;right:-11px}
@@ -1313,21 +1313,27 @@ section{margin-top:80px}
 .woocommerce-tabs .woocommerce-product-attributes th{padding:0 20px;vertical-align:middle}
 .woocommerce-tabs .woocommerce-product-attributes td{border:1px solid #ced4da;padding:20px}
 .woocommerce-tabs .woocommerce-product-attributes td p{margin:0}
-footer{clear:both;display:-webkit-box;display:-ms-flexbox;display:flex;min-height:20vh;width:100%;background-color:#001225}
+.woocommerce-cart-form .coupon{margin-top:22px}
+.woocommerce-cart-form .coupon .button{float:left}
+.woocommerce-cart-form .button[name="apply_coupon"]{margin:10px 10px 10px 0}
+.woocommerce-cart-form .button[name="update_cart"]{margin:10px 10px 10px 0}
+.cart-collaterals{padding:22px 0 44px 0}
+.cart-collaterals .wc-proceed-to-checkout{padding:22px 0 0 0}
+footer{clear:both;display:-webkit-box;display:-ms-flexbox;display:flex;min-height:20vh;width:100%;background-color:#001225;padding:50px 0}
 footer .site-info{color:#fff;width:100%;margin:auto}
-footer .site-info #footer-contact form label{display:block}
+footer .site-info #footer-nav-menu{padding:0 0 22px 0;text-align:center}
+footer .site-info #footer-nav-menu li{list-style:none}
+footer .site-info #footer-nav-menu li a{color:#fff;border-bottom:1px solid #fff;padding-bottom:2px}
+footer .site-info #footer-nav-menu li a:hover{color:#9d7900;border-bottom:1px solid #9d7900}
 footer .site-info #footer-media{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;height:86px}
 footer .site-info #footer-media #footer-media-content{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-flow:column nowrap;flex-flow:column nowrap}
-footer .site-info #footer-media #footer-media-content #footer-media-content-icons{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
+footer .site-info #footer-media #footer-media-content #footer-media-content-icons{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;padding:0 0 22px 0}
 footer .site-info #footer-media #footer-media-content #footer-media-content-icons a{margin-left:.5em;color:#fff}
 footer .site-info #footer-media #footer-media-content #footer-media-content-icons a:hover{color:#9d7900}
 footer .site-info #footer-media #footer-media-content #footer-media-content-icons .icon-facebook:before{content:"\ea90";font-size:20px}
 footer .site-info #footer-media #footer-media-content #footer-media-content-icons .icon-instagram:before{content:"\ea92";font-size:20px}
 footer .site-info #footer-media #footer-media-content #footer-media-content-icons .icon-twitter:before{content:"\ea96";font-size:20px}
 footer .site-info #footer-media #footer-media-content p{position:relative;top:8px}
-footer .site-info #footer-nav-menu li{list-style:none}
-footer .site-info #footer-nav-menu li a{color:#fff}
-footer .site-info #footer-nav-menu li a:hover{color:#9d7900}
 .entry-footer{background-color:#fff}
 @media(prefers-reduced-motion:reduce){.form-control,input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="number"],input[type="tel"],input[type="range"],input[type="date"],input[type="month"],input[type="week"],input[type="time"],input[type="datetime"],input[type="datetime-local"],input[type="color"],textarea,select{-webkit-transition:none;transition:none}
 .form-range::-webkit-slider-thumb{-webkit-transition:none;transition:none}
@@ -1344,8 +1350,6 @@ footer .site-info #footer-nav-menu li a:hover{color:#9d7900}
 .carousel-control-prev,.carousel-control-next{-webkit-transition:none;transition:none}
 .carousel-indicators li{-webkit-transition:none;transition:none}
 }@media screen and (min-width:48em){.woocommerce-cart-form table{width:100%}
-}@media screen and (min-width:450px){footer .site-info #footer-contact form{width:400px;margin:auto}
-footer .site-info #footer-nav-menu{display:grid;grid-template-columns:repeat(2,1fr);row-gap:6px;-webkit-column-gap:8px;-moz-column-gap:8px;column-gap:8px;margin:auto;width:-webkit-max-content;width:-moz-max-content;width:max-content;text-align:center}
 }@media(min-width:576px){.container{max-width:540px}
 .container,.container-sm{max-width:540px}
 .col-sm{-ms-flex-preferred-size:0;flex-basis:0;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;max-width:100%}
@@ -1599,6 +1603,7 @@ footer .site-info #footer-nav-menu{display:grid;grid-template-columns:repeat(2,1
 footer{padding:100px 0}
 }@media screen and (min-width:576px){#front-page #front-page-categories .categories .category-copy{padding:90px 58px}
 #front-page #front-page-categories .category-image-container img{position:absolute}
+footer .site-info #footer-nav-menu{display:-webkit-box;display:-ms-flexbox;display:flex;margin:auto;width:100%;-ms-flex-pack:distribute;justify-content:space-around;padding:0 0 38px 0}
 }@media(min-width:768px){.container{max-width:720px}
 .container,.container-sm,.container-md{max-width:720px}
 .col-md{-ms-flex-preferred-size:0;flex-basis:0;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;max-width:100%}

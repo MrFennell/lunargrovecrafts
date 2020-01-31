@@ -21,16 +21,6 @@
                 ?>
             </div> -->
 			<div id="footer-media-container" class="col-sm">
-                <div id="footer-media">
-                    <div id="footer-media-content" >
-                        <div id="footer-media-content-icons">	
-                            <a href="#" ><span class="icon-facebook"></span></a>
-                            <a href="#" ><span class="icon-twitter"></span></a>
-                            <a href="#" ><span class="icon-instagram"></span></a>
-                        </div>
-                        <p>©2019 Lunar Grove Crafts </p>
-                    </div>
-                </div>
                 <div id="footer-nav-container">
                     <?php
                         wp_nav_menu( array(
@@ -43,6 +33,17 @@
                         ) );
                     ?>
                 </div>
+                <div id="footer-media">
+                    <div id="footer-media-content" >
+                        <div id="footer-media-content-icons">	
+                            <a href="#" ><span class="icon-facebook"></span></a>
+                            <a href="#" ><span class="icon-twitter"></span></a>
+                            <a href="#" ><span class="icon-instagram"></span></a>
+                        </div>
+                        <p>©2019 Lunar Grove Crafts </p>
+                    </div>
+                </div>
+                
 			</div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
